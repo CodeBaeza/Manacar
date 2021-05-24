@@ -20,15 +20,12 @@ namespace ManaCar
         }
 
         private void btnCrearUsuarioN_Click(object sender, EventArgs e)
-        {
-            
-            
+        {           
             if (tbUsuarioN.Text.Length == 0)
             {           
-            MessageBox.Show("Introduce el usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                              
-            
-            }else if (tbContraseñaN.Text.Length == 0)
+            MessageBox.Show("Introduce el usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                                 
+            }
+            else if (tbContraseñaN.Text.Length == 0)
             {
                 MessageBox.Show("Selecciona el privilegio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -45,7 +42,6 @@ namespace ManaCar
                     tbUsuarioN.Text = "";
                     tbContraseñaN.Text = "";
                 }
-
             }
         }
 
@@ -53,9 +49,6 @@ namespace ManaCar
         {
             tbUsuarioN.Text ="";
             tbContraseñaN.Text ="";
-            
-
-
         }
     }
 }

@@ -13,8 +13,6 @@ namespace ManaCar.Clases
         MySqlDataReader comando;
         static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=manacar;Convert Zero Datetime=True;";
         MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-
-
         public void Login(string usuarioIntroducido, string contraseña)
         {
             bool encontrado = false;
@@ -40,11 +38,8 @@ namespace ManaCar.Clases
                     }
                     if (encontrado == true)
                     {
-
                         MenuAdministracion menu = new MenuAdministracion();
-                        menu.Show();
-                        
-
+                        menu.Show();                
                     }
                     else
                     {
@@ -138,12 +133,8 @@ namespace ManaCar.Clases
         }
         public List<UsuariosSistema> mostrarLista()
         {
-
             List<UsuariosSistema> listaUsuarios = new List<UsuariosSistema>();
-
-
             string querySearch = "Select * from usuarios;";
-
 
             try
             {
@@ -154,17 +145,13 @@ namespace ManaCar.Clases
                 {
                     while (comando.Read())
                     {
-
                         UsuariosSistema us = new UsuariosSistema();
                         us.Usuario = comando.GetString(0);
                         //us.Password = comando.GetString(1);
                         listaUsuarios.Add(us);
-
-
                     }
                     return listaUsuarios;
                 }
-
             }
             catch (Exception e)
             {
@@ -175,8 +162,6 @@ namespace ManaCar.Clases
                 databaseConnection.Close();
             }
             return null;
-
-
         }
         public void insertarCliente(string nombre, string apellidos, string dni, DateTime fecha_entrada, DateTime fecha_salida, string matricula, string marca, string modelo, string parking)
         {
@@ -186,7 +171,6 @@ namespace ManaCar.Clases
                 databaseConnection.Open();
                 MySqlCommand comandDatabase = new MySqlCommand(queryInsert, databaseConnection);
                 comando = comandDatabase.ExecuteReader();
-
             }
             catch (Exception e)
             {
@@ -248,9 +232,7 @@ namespace ManaCar.Clases
             {
                 databaseConnection.Open();
                 MySqlCommand comandDatabase = new MySqlCommand(queryUpdate, databaseConnection);
-                comando = comandDatabase.ExecuteReader();
-                
-
+                comando = comandDatabase.ExecuteReader();               
             }
             catch (Exception e)
             {
@@ -295,8 +277,7 @@ namespace ManaCar.Clases
                     while (comando.Read())
                     {
                         string[] row = { comando.GetString(0) };
-                        usuario = row[0];
-                       
+                        usuario = row[0];                      
                         if (usuarioIntroducido == usuario)
                         {
                             encontrado = true;
@@ -319,6 +300,6 @@ namespace ManaCar.Clases
             return false;
         }
     }
-    }
+}
     
 

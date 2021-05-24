@@ -14,7 +14,6 @@ namespace ManaCar.Clases
         public UsuariosSistema()
         {  
         }
-
         public string Usuario { get => usuario; set => usuario = value; }
         public string Password { get => password; set => password = value; }
 
