@@ -41,6 +41,7 @@ namespace ManaCar
             this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaSalida = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbPlazaParking = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@ namespace ManaCar
             this.columnaModelo1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaFEntrada = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaFsalida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -117,35 +117,35 @@ namespace ManaCar
             this.tbNombreR.Location = new System.Drawing.Point(9, 42);
             this.tbNombreR.Name = "tbNombreR";
             this.tbNombreR.Size = new System.Drawing.Size(245, 20);
-            this.tbNombreR.TabIndex = 6;
+            this.tbNombreR.TabIndex = 1;
             // 
             // tbApellidosR
             // 
             this.tbApellidosR.Location = new System.Drawing.Point(9, 84);
             this.tbApellidosR.Name = "tbApellidosR";
             this.tbApellidosR.Size = new System.Drawing.Size(245, 20);
-            this.tbApellidosR.TabIndex = 7;
+            this.tbApellidosR.TabIndex = 2;
             // 
             // tbDNIR
             // 
             this.tbDNIR.Location = new System.Drawing.Point(9, 123);
             this.tbDNIR.Name = "tbDNIR";
             this.tbDNIR.Size = new System.Drawing.Size(245, 20);
-            this.tbDNIR.TabIndex = 8;
+            this.tbDNIR.TabIndex = 3;
             // 
             // dtpFechaEntrada
             // 
             this.dtpFechaEntrada.Location = new System.Drawing.Point(9, 162);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
             this.dtpFechaEntrada.Size = new System.Drawing.Size(245, 20);
-            this.dtpFechaEntrada.TabIndex = 10;
+            this.dtpFechaEntrada.TabIndex = 4;
             // 
             // dtpFechaSalida
             // 
             this.dtpFechaSalida.Location = new System.Drawing.Point(9, 202);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
             this.dtpFechaSalida.Size = new System.Drawing.Size(245, 20);
-            this.dtpFechaSalida.TabIndex = 11;
+            this.dtpFechaSalida.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -178,12 +178,21 @@ namespace ManaCar
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ManaCar.Properties.Resources.manacar1;
+            this.pictureBox1.Location = new System.Drawing.Point(496, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(253, 140);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // tbPlazaParking
             // 
             this.tbPlazaParking.Location = new System.Drawing.Point(286, 165);
             this.tbPlazaParking.Name = "tbPlazaParking";
             this.tbPlazaParking.Size = new System.Drawing.Size(167, 20);
-            this.tbPlazaParking.TabIndex = 24;
+            this.tbPlazaParking.TabIndex = 9;
             // 
             // label12
             // 
@@ -200,7 +209,7 @@ namespace ManaCar
             this.button2.Location = new System.Drawing.Point(378, 199);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
+            this.button2.TabIndex = 11;
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -210,7 +219,7 @@ namespace ManaCar
             this.btnGuardarRegistro.Location = new System.Drawing.Point(286, 199);
             this.btnGuardarRegistro.Name = "btnGuardarRegistro";
             this.btnGuardarRegistro.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarRegistro.TabIndex = 21;
+            this.btnGuardarRegistro.TabIndex = 10;
             this.btnGuardarRegistro.Text = "Guardar";
             this.btnGuardarRegistro.UseVisualStyleBackColor = false;
             this.btnGuardarRegistro.Click += new System.EventHandler(this.btnGuardarRegistro_Click);
@@ -220,21 +229,21 @@ namespace ManaCar
             this.tbModeloR.Location = new System.Drawing.Point(286, 123);
             this.tbModeloR.Name = "tbModeloR";
             this.tbModeloR.Size = new System.Drawing.Size(167, 20);
-            this.tbModeloR.TabIndex = 19;
+            this.tbModeloR.TabIndex = 8;
             // 
             // tbMarcaR
             // 
             this.tbMarcaR.Location = new System.Drawing.Point(286, 42);
             this.tbMarcaR.Name = "tbMarcaR";
             this.tbMarcaR.Size = new System.Drawing.Size(167, 20);
-            this.tbMarcaR.TabIndex = 18;
+            this.tbMarcaR.TabIndex = 6;
             // 
             // tbMatriculaR
             // 
             this.tbMatriculaR.Location = new System.Drawing.Point(286, 84);
             this.tbMatriculaR.Name = "tbMatriculaR";
             this.tbMatriculaR.Size = new System.Drawing.Size(167, 20);
-            this.tbMatriculaR.TabIndex = 17;
+            this.tbMatriculaR.TabIndex = 7;
             // 
             // label9
             // 
@@ -337,15 +346,6 @@ namespace ManaCar
             this.columnaFsalida.DisplayIndex = 7;
             this.columnaFsalida.Text = "Salida";
             this.columnaFsalida.Width = 70;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ManaCar.Properties.Resources.manacar1;
-            this.pictureBox1.Location = new System.Drawing.Point(496, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 140);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
             // 
             // Registro
             // 

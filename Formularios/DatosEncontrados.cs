@@ -49,5 +49,15 @@ namespace ManaCar.Formularios
             con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
             MessageBox.Show("Datos actualizados correctamente");
         }
+
+        private void btnEliminarEncontrado_Click(object sender, EventArgs e)
+        {
+            
+            con.eliminarDatosClientes(tbDNIEncontrado.Text);
+            MessageBox.Show("Datos eliminados correctamente");
+            this.Close();
+            Buscar bc = new Buscar();
+            bc.Show();
+        }
     }
 }

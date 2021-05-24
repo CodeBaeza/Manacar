@@ -63,7 +63,7 @@ namespace ManaCar
             this.dtpFechaCS.Location = new System.Drawing.Point(127, 37);
             this.dtpFechaCS.Name = "dtpFechaCS";
             this.dtpFechaCS.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaCS.TabIndex = 1;
+            this.dtpFechaCS.TabIndex = 2;
             // 
             // label2
             // 
@@ -79,7 +79,7 @@ namespace ManaCar
             this.tbNombreCS.Location = new System.Drawing.Point(12, 37);
             this.tbNombreCS.Name = "tbNombreCS";
             this.tbNombreCS.Size = new System.Drawing.Size(100, 20);
-            this.tbNombreCS.TabIndex = 3;
+            this.tbNombreCS.TabIndex = 1;
             // 
             // label3
             // 
@@ -95,7 +95,7 @@ namespace ManaCar
             this.tbPathCS.Location = new System.Drawing.Point(12, 84);
             this.tbPathCS.Name = "tbPathCS";
             this.tbPathCS.Size = new System.Drawing.Size(271, 20);
-            this.tbPathCS.TabIndex = 5;
+            this.tbPathCS.TabIndex = 3;
             // 
             // btnPathCopia
             // 
@@ -103,7 +103,7 @@ namespace ManaCar
             this.btnPathCopia.Location = new System.Drawing.Point(289, 84);
             this.btnPathCopia.Name = "btnPathCopia";
             this.btnPathCopia.Size = new System.Drawing.Size(38, 20);
-            this.btnPathCopia.TabIndex = 6;
+            this.btnPathCopia.TabIndex = 4;
             this.btnPathCopia.Text = "...";
             this.btnPathCopia.UseVisualStyleBackColor = false;
             this.btnPathCopia.Click += new System.EventHandler(this.btnPathCopia_Click);
@@ -114,7 +114,7 @@ namespace ManaCar
             this.btnGuardarCS.Location = new System.Drawing.Point(12, 110);
             this.btnGuardarCS.Name = "btnGuardarCS";
             this.btnGuardarCS.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarCS.TabIndex = 7;
+            this.btnGuardarCS.TabIndex = 5;
             this.btnGuardarCS.Text = "Guardar";
             this.btnGuardarCS.UseVisualStyleBackColor = false;
             this.btnGuardarCS.Click += new System.EventHandler(this.btnGuardarCS_Click);
@@ -163,7 +163,7 @@ namespace ManaCar
             this.btnBuscarCS.Location = new System.Drawing.Point(12, 280);
             this.btnBuscarCS.Name = "btnBuscarCS";
             this.btnBuscarCS.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarCS.TabIndex = 10;
+            this.btnBuscarCS.TabIndex = 6;
             this.btnBuscarCS.Text = "Listar";
             this.btnBuscarCS.UseVisualStyleBackColor = false;
             // 

@@ -22,19 +22,30 @@ namespace ManaCar
         private void btnCrearUsuarioN_Click(object sender, EventArgs e)
         {
             
+            
             if (tbUsuarioN.Text.Length == 0)
-            {
-                MessageBox.Show("Introduce el usuario","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            {           
+            MessageBox.Show("Introduce el usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                              
+            
             }else if (tbContraseñaN.Text.Length == 0)
             {
                 MessageBox.Show("Selecciona el privilegio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                con.nuevoUsuario(tbUsuarioN.Text,tbContraseñaN.Text);
-                MessageBox.Show("Usuario creado satisfactoriamente","Informacion",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbUsuarioN.Text = "";
-                tbContraseñaN.Text = ""; 
+                if (con.comprobarUsuario(tbUsuarioN.Text) == true)
+                {
+                    MessageBox.Show("El nombre de usuario ya esta en uso");
+                }
+                else 
+                {
+                    con.nuevoUsuario(tbUsuarioN.Text, tbContraseñaN.Text);
+                    MessageBox.Show("Usuario creado satisfactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbUsuarioN.Text = "";
+                    tbContraseñaN.Text = "";
+                }
+
             }
         }
 

@@ -61,14 +61,14 @@ namespace ManaCar
             this.tbUsuarioN.Location = new System.Drawing.Point(28, 44);
             this.tbUsuarioN.Name = "tbUsuarioN";
             this.tbUsuarioN.Size = new System.Drawing.Size(199, 20);
-            this.tbUsuarioN.TabIndex = 2;
+            this.tbUsuarioN.TabIndex = 1;
             // 
             // tbContraseñaN
             // 
             this.tbContraseñaN.Location = new System.Drawing.Point(28, 83);
             this.tbContraseñaN.Name = "tbContraseñaN";
             this.tbContraseñaN.Size = new System.Drawing.Size(199, 20);
-            this.tbContraseñaN.TabIndex = 3;
+            this.tbContraseñaN.TabIndex = 2;
             // 
             // btnCrearUsuarioN
             // 
@@ -76,7 +76,7 @@ namespace ManaCar
             this.btnCrearUsuarioN.Location = new System.Drawing.Point(28, 129);
             this.btnCrearUsuarioN.Name = "btnCrearUsuarioN";
             this.btnCrearUsuarioN.Size = new System.Drawing.Size(75, 23);
-            this.btnCrearUsuarioN.TabIndex = 4;
+            this.btnCrearUsuarioN.TabIndex = 3;
             this.btnCrearUsuarioN.Text = "Crear";
             this.btnCrearUsuarioN.UseVisualStyleBackColor = false;
             this.btnCrearUsuarioN.Click += new System.EventHandler(this.btnCrearUsuarioN_Click);
@@ -87,7 +87,7 @@ namespace ManaCar
             this.btnLimpiarN.Location = new System.Drawing.Point(152, 129);
             this.btnLimpiarN.Name = "btnLimpiarN";
             this.btnLimpiarN.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiarN.TabIndex = 5;
+            this.btnLimpiarN.TabIndex = 4;
             this.btnLimpiarN.Text = "Limpiar";
             this.btnLimpiarN.UseVisualStyleBackColor = false;
             this.btnLimpiarN.Click += new System.EventHandler(this.btnLimpiarN_Click);

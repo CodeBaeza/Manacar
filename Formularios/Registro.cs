@@ -39,7 +39,7 @@ namespace ManaCar
             lista.SubItems.Add(dc.Marca);
             lista.SubItems.Add(dc.Modelo);
             lista.SubItems.Add(dc.FechaEntrada.ToString());
-            lista.SubItems.Add(dc.FechaEntrada.ToString());
+            lista.SubItems.Add(dc.FechaSalida.ToString());
 
 
                     
@@ -61,40 +61,7 @@ namespace ManaCar
         }
 
             }
-
-
-
-            /*
-            if (posicion != posicionNula) //Controlamos si agregamos o modificamos.
-            {
-                ListaAuxiliar.RemoveAt(posicion);
-                ListaAuxiliar.Add(du);
-                posicion = posicionNula;
-               
-            }
-            else
-            {
-                
-                ListaAuxiliar.Add(du);
-                
-
-            }
-            tbNombreR.Text = "";
-            tbApellidosR.Text = "";
-            tbDNIR.Text = "";
-            tbMatriculaR.Text = "";
-            tbModeloR.Text = "";
-            tbMarcaR.Text = "";
-            tbPlazaParking.Text = "";
-            lbRegistro.Items.AddRange(ListaAuxiliar.ToArray());
-            
-            */
-
-          
-            
-
-
-            }
+    }
 
         
     

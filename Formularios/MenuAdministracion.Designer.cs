@@ -100,7 +100,7 @@ namespace ManaCar
             this.btnRegistroA.Location = new System.Drawing.Point(12, 45);
             this.btnRegistroA.Name = "btnRegistroA";
             this.btnRegistroA.Size = new System.Drawing.Size(250, 23);
-            this.btnRegistroA.TabIndex = 9;
+            this.btnRegistroA.TabIndex = 1;
             this.btnRegistroA.Text = "Registro";
             this.btnRegistroA.UseVisualStyleBackColor = false;
             this.btnRegistroA.Click += new System.EventHandler(this.btnRegistroA_Click);
@@ -111,7 +111,7 @@ namespace ManaCar
             this.btnBuscarA.Location = new System.Drawing.Point(12, 74);
             this.btnBuscarA.Name = "btnBuscarA";
             this.btnBuscarA.Size = new System.Drawing.Size(250, 23);
-            this.btnBuscarA.TabIndex = 10;
+            this.btnBuscarA.TabIndex = 2;
             this.btnBuscarA.Text = "Buscar";
             this.btnBuscarA.UseVisualStyleBackColor = false;
             this.btnBuscarA.Click += new System.EventHandler(this.btnModificarA_Click);

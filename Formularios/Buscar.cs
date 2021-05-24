@@ -41,7 +41,11 @@ namespace ManaCar
                
                 de.setDcData(dc);
                 de.ShowDialog();
+                this.Close();
             }
+            
         }
+
+       
     }
 }

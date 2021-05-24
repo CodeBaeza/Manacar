@@ -40,9 +40,11 @@ namespace ManaCar.Clases
                     }
                     if (encontrado == true)
                     {
-                        
+
                         MenuAdministracion menu = new MenuAdministracion();
                         menu.Show();
+                        
+
                     }
                     else
                     {
@@ -195,45 +197,6 @@ namespace ManaCar.Clases
                 databaseConnection.Close();
             }
         }
-        public string controlDuplicados(string matriculaRecibida)
-        {
-            string matricula;
-            string querySearch = "Select matricula from clientes where matricula ='" + matriculaRecibida + "';";
-            bool encontrado = false;
-            try
-            {
-                databaseConnection.Open();
-                MySqlCommand comandDatabase = new MySqlCommand(querySearch, databaseConnection);
-                comando = comandDatabase.ExecuteReader();
-                if (comando.HasRows)
-                {
-                    while (comando.Read())
-                    {
-                        string[] listaMatricula = { comando.GetString(0) };
-                        matricula = listaMatricula[0];
-
-                        if (matriculaRecibida == matricula)
-                        {
-                            encontrado = true;
-                        }
-                    }
-                    if (encontrado == true)
-                    {
-                        return matriculaRecibida;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            finally
-            {
-                databaseConnection.Close();
-            }
-            return null;
-        }
-
         public List<DatosClientes> MostrarCliente( string dni)
         {
             List<DatosClientes> listaAux = new List<DatosClientes>();
@@ -278,7 +241,6 @@ namespace ManaCar.Clases
             }
             return null;
         }
-
         public void actualizarDatosClientes(string nombre, string apellidos, string dni, DateTime fecha_entrada, DateTime fecha_salida, string matricula, string marca, string modelo, string parking)
         {
             string queryUpdate = " UPDATE clientes SET nombre= '"+nombre+ "', apellidos= '" + apellidos + "', dni= '" + dni + "', fecha_entrada= '" + fecha_entrada + "', fecha_salida= '" + fecha_salida + "', matricula= '" + matricula + "', marca= '" + marca + "', modelo= '" + modelo + "', plaza_parking='" + parking + "' WHERE dni ='" + dni + "'";
@@ -298,7 +260,65 @@ namespace ManaCar.Clases
             {
                 databaseConnection.Close();
             }
+        }        
+        public void eliminarDatosClientes(string dni)
+        {
+            string queryDelete = "Delete from clientes where dni = '"+dni+"'";
+            try
+            {
+                databaseConnection.Open();
+                MySqlCommand comandDatabase = new MySqlCommand(queryDelete, databaseConnection);
+                comando = comandDatabase.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
         }
-    
+        public bool comprobarUsuario(string usuarioIntroducido)
+        {
+            bool encontrado = false;
+            string usuario;
+            string querySelect = "Select usuario from usuarios where usuario = '" + usuarioIntroducido + "'";
+
+            try
+            {
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand(querySelect, databaseConnection);
+                comando = commandDatabase.ExecuteReader();
+                if (comando.HasRows)
+                {
+                    while (comando.Read())
+                    {
+                        string[] row = { comando.GetString(0) };
+                        usuario = row[0];
+                       
+                        if (usuarioIntroducido == usuario)
+                        {
+                            encontrado = true;
+                        }
+                    }
+                    if (encontrado == true)
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+            return false;
+        }
     }
-}
+    }
+    
+

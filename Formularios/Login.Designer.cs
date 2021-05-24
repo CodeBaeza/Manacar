@@ -68,7 +68,7 @@ namespace ManaCar
             this.btnEntrar.Location = new System.Drawing.Point(62, 270);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(90, 23);
-            this.btnEntrar.TabIndex = 1;
+            this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -79,7 +79,7 @@ namespace ManaCar
             this.btnLimpiar.Location = new System.Drawing.Point(183, 270);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(92, 23);
-            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -89,14 +89,14 @@ namespace ManaCar
             this.tbCorreo.Location = new System.Drawing.Point(62, 205);
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.Size = new System.Drawing.Size(213, 20);
-            this.tbCorreo.TabIndex = 3;
+            this.tbCorreo.TabIndex = 1;
             // 
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(62, 244);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(213, 20);
-            this.tbPass.TabIndex = 4;
+            this.tbPass.TabIndex = 2;
             // 
             // label1
             // 

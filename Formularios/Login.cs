@@ -24,6 +24,7 @@ namespace ManaCar
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             con.Login(tbCorreo.Text, tbPass.Text);
+            
 
         }
         private void btnLimpiar_Click(object sender, EventArgs e)

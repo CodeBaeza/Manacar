@@ -73,7 +73,7 @@ namespace ManaCar
             this.btnMostrarUsuarios.Location = new System.Drawing.Point(12, 281);
             this.btnMostrarUsuarios.Name = "btnMostrarUsuarios";
             this.btnMostrarUsuarios.Size = new System.Drawing.Size(75, 23);
-            this.btnMostrarUsuarios.TabIndex = 4;
+            this.btnMostrarUsuarios.TabIndex = 3;
             this.btnMostrarUsuarios.Text = "Listar";
             this.btnMostrarUsuarios.UseVisualStyleBackColor = false;
             this.btnMostrarUsuarios.Click += new System.EventHandler(this.btnMostrarUsuarios_Click);
@@ -84,7 +84,7 @@ namespace ManaCar
             this.btnEliminarE.Location = new System.Drawing.Point(267, 51);
             this.btnEliminarE.Name = "btnEliminarE";
             this.btnEliminarE.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarE.TabIndex = 5;
+            this.btnEliminarE.TabIndex = 2;
             this.btnEliminarE.Text = "Eliminar";
             this.btnEliminarE.UseVisualStyleBackColor = false;
             this.btnEliminarE.Click += new System.EventHandler(this.btnEliminarE_Click);
