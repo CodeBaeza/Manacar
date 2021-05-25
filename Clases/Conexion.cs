@@ -185,7 +185,7 @@ namespace ManaCar.Clases
                 databaseConnection.Close();
             }
         }
-        public List<DatosClientes> MostrarCliente( string dni)
+        public List<DatosClientes> MostrarCliente(string dni)
         {
             List<DatosClientes> listaAux = new List<DatosClientes>();
             string querySearch = "Select nombre, apellidos, dni, fecha_entrada, fecha_salida, matricula, marca, modelo, plaza_parking from clientes where dni ='" + dni + "' ;";
@@ -303,7 +303,6 @@ namespace ManaCar.Clases
             }
             return false;
         }
-
         public void generarPDF()
         {
             string querySearch = "Select * from clientes";
