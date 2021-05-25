@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace ManaCar.Clases
 {
@@ -165,7 +168,8 @@ namespace ManaCar.Clases
         }
         public void insertarCliente(string nombre, string apellidos, string dni, DateTime fecha_entrada, DateTime fecha_salida, string matricula, string marca, string modelo, string parking)
         {
-            string queryInsert = "Insert into clientes  (nombre, apellidos,dni,fecha_entrada,fecha_salida,matricula,marca,modelo,plaza_parking) values ('" + nombre + "','" + apellidos + "','" + dni + "','" + fecha_entrada + "','" + fecha_salida + "','" + matricula + "','" + marca + "','" + modelo + "','" + parking + "');";
+
+            string queryInsert ="Insert into clientes  (nombre, apellidos,dni,fecha_entrada,fecha_salida,matricula,marca,modelo,plaza_parking) values ('" + nombre + "','" + apellidos + "','" + dni + "','" + fecha_entrada + "','" + fecha_salida + "','" + matricula + "','" + marca + "','" + modelo + "','" + parking + "')";
             try
             {
                 databaseConnection.Open();
@@ -299,7 +303,66 @@ namespace ManaCar.Clases
             }
             return false;
         }
+
+        public void generarPDF()
+        {
+            string querySearch = "Select * from clientes";
+            Document doc = new Document();
+            PdfWriter.GetInstance(doc, new FileStream("Lista.pdf", FileMode.Create));
+            doc.Open();
+            Paragraph title = new Paragraph();
+            title.Font = FontFactory.GetFont(FontFactory.TIMES, 28f, BaseColor.BLUE);
+            title.Add("LISTADO PDF");
+            doc.Add(title);
+            doc.Add(new Paragraph(" "));
+
+            PdfPTable table = new PdfPTable(7);
+                table.AddCell("nombre");
+                table.AddCell("apellidos");
+                table.AddCell("dni");
+                
+                table.AddCell("matricula");
+                table.AddCell("marca");
+                table.AddCell("modelo");
+                table.AddCell("parking");
+
+
+            try
+            {
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand(querySearch, databaseConnection);
+                comando = commandDatabase.ExecuteReader();
+                if (comando.HasRows)
+                {
+                    while (comando.Read())
+                    {
+                        table.AddCell(comando.GetString("nombre"));
+                        table.AddCell(comando.GetString("apellidos"));
+                        table.AddCell(comando.GetString("dni"));                                               
+                        table.AddCell(comando.GetString("matricula"));
+                        table.AddCell(comando.GetString("marca"));
+                        table.AddCell(comando.GetString("modelo"));
+                        table.AddCell(comando.GetString("plaza_parking"));
+                    }
+                    doc.Add(table);
+                }
+                   
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                databaseConnection.Close();
+                doc.Close();
+            }
+            
+        }
+
     }
-}
+   }
+
+
     
 

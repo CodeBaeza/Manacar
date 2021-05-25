@@ -45,3 +45,6 @@ C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.csproj.Copy
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Formularios.DatosEncontrados.resources
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Buscar.resources
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Properties.Resources.resources
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Formularios.Generar_PDF.resources
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\itextsharp.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\itextsharp.xml

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManaCar.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +68,12 @@ namespace ManaCar
         {
             CopiaSeguridad cs = new CopiaSeguridad();
             cs.ShowDialog();
+        }
+
+        private void generarPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Generar_PDF gpdf = new Generar_PDF();
+            gpdf.ShowDialog();
         }
     }
 }

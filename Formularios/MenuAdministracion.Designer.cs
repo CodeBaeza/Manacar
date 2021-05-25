@@ -47,6 +47,7 @@ namespace ManaCar
             this.utilidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.copiaSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.generarPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -161,7 +162,8 @@ namespace ManaCar
             // utilidadesToolStripMenuItem1
             // 
             this.utilidadesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copiaSeguridadToolStripMenuItem});
+            this.copiaSeguridadToolStripMenuItem,
+            this.generarPDFToolStripMenuItem});
             this.utilidadesToolStripMenuItem1.Name = "utilidadesToolStripMenuItem1";
             this.utilidadesToolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
             this.utilidadesToolStripMenuItem1.Text = "Utilidades";
@@ -169,7 +171,7 @@ namespace ManaCar
             // copiaSeguridadToolStripMenuItem
             // 
             this.copiaSeguridadToolStripMenuItem.Name = "copiaSeguridadToolStripMenuItem";
-            this.copiaSeguridadToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.copiaSeguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copiaSeguridadToolStripMenuItem.Text = "Copia seguridad";
             this.copiaSeguridadToolStripMenuItem.Click += new System.EventHandler(this.copiaSeguridadToolStripMenuItem_Click);
             // 
@@ -181,6 +183,13 @@ namespace ManaCar
             this.pictureBox1.Size = new System.Drawing.Size(197, 184);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
+            // 
+            // generarPDFToolStripMenuItem
+            // 
+            this.generarPDFToolStripMenuItem.Name = "generarPDFToolStripMenuItem";
+            this.generarPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generarPDFToolStripMenuItem.Text = "Generar PDF";
+            this.generarPDFToolStripMenuItem.Click += new System.EventHandler(this.generarPDFToolStripMenuItem_Click);
             // 
             // MenuAdministracion
             // 
@@ -224,5 +233,6 @@ namespace ManaCar
         private System.Windows.Forms.ToolStripMenuItem utilidadesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem copiaSeguridadToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem generarPDFToolStripMenuItem;
     }
 }
