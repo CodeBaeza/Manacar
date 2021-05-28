@@ -48,3 +48,9 @@ C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Properties.
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Formularios.Generar_PDF.resources
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\itextsharp.dll
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\itextsharp.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.csproj.ResolveComReference.cache
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Formularios.DocumentoPDF.resources

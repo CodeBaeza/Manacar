@@ -1,5 +1,6 @@
 ﻿using ManaCar.Clases;
 using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,18 +12,20 @@ using System.Windows.Forms;
 
 namespace ManaCar.Formularios
 {
-    public partial class Generar_PDF : Form
+   
+    public partial class DocumentoPDF : Form
     {
         Conexion con = new Conexion();
-        public Generar_PDF()
+        public DocumentoPDF()
         {
             InitializeComponent();
-        }
+            con.generarPDF();
+            OpenFileDialog abrir = new OpenFileDialog();
+            abrir.ShowDialog();
+            axAcroPDF1.src = abrir.FileName;
 
-        private void btnGenerar_Click(object sender, EventArgs e)
-        {
-            DocumentoPDF generarPdf =  new DocumentoPDF();
-            generarPdf.Show();
+
+
         }
     }
 }
