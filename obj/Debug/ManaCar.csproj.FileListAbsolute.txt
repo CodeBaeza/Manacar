@@ -54,3 +54,15 @@ C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\Interop.AcroPDFLib.
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.csproj.ResolveComReference.cache
 C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\obj\Debug\ManaCar.Formularios.DocumentoPDF.resources
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\MySqlBackup.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\Renci.SshNet.dll
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\Google.Protobuf.pdb
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\Google.Protobuf.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\Renci.SshNet.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\System.Buffers.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\System.Memory.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Cristian\Desktop\Proyecto\ManaCar\ManaCar\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

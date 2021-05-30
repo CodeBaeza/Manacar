@@ -75,5 +75,10 @@ namespace ManaCar
             Generar_PDF gpdf = new Generar_PDF();
             gpdf.ShowDialog();
         }
+
+        private void MenuAdministracion_Load(object sender, EventArgs e)
+        {
+            this.Text = "Adminstracion " + "PEPE";
+        }
     }
 }

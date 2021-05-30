@@ -114,17 +114,19 @@ namespace ManaCar.Formularios
             // 
             // dtpFechaEntrada
             // 
+            this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaEntrada.Location = new System.Drawing.Point(6, 160);
             this.dtpFechaEntrada.MinDate = new System.DateTime(1753, 3, 31, 0, 0, 0, 0);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(105, 20);
             this.dtpFechaEntrada.TabIndex = 4;
             // 
             // dtpFechaSalida
             // 
+            this.dtpFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaSalida.Location = new System.Drawing.Point(5, 199);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
-            this.dtpFechaSalida.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaSalida.Size = new System.Drawing.Size(106, 20);
             this.dtpFechaSalida.TabIndex = 5;
             // 
             // label5
@@ -203,7 +205,7 @@ namespace ManaCar.Formularios
             // btnGuardarEncontrado
             // 
             this.btnGuardarEncontrado.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnGuardarEncontrado.Location = new System.Drawing.Point(239, 217);
+            this.btnGuardarEncontrado.Location = new System.Drawing.Point(160, 215);
             this.btnGuardarEncontrado.Name = "btnGuardarEncontrado";
             this.btnGuardarEncontrado.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarEncontrado.TabIndex = 10;
@@ -214,7 +216,7 @@ namespace ManaCar.Formularios
             // btnEliminarEncontrado
             // 
             this.btnEliminarEncontrado.BackColor = System.Drawing.Color.LightCoral;
-            this.btnEliminarEncontrado.Location = new System.Drawing.Point(320, 217);
+            this.btnEliminarEncontrado.Location = new System.Drawing.Point(241, 215);
             this.btnEliminarEncontrado.Name = "btnEliminarEncontrado";
             this.btnEliminarEncontrado.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarEncontrado.TabIndex = 11;
@@ -237,7 +239,7 @@ namespace ManaCar.Formularios
             this.groupBox1.Controls.Add(this.dtpFechaSalida);
             this.groupBox1.Location = new System.Drawing.Point(12, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(221, 248);
+            this.groupBox1.Size = new System.Drawing.Size(142, 248);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
@@ -253,7 +255,7 @@ namespace ManaCar.Formularios
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tbModeloEncontrado);
-            this.groupBox2.Location = new System.Drawing.Point(239, 18);
+            this.groupBox2.Location = new System.Drawing.Point(160, 18);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(156, 193);
             this.groupBox2.TabIndex = 22;
@@ -265,7 +267,7 @@ namespace ManaCar.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(411, 282);
+            this.ClientSize = new System.Drawing.Size(335, 269);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEliminarEncontrado);

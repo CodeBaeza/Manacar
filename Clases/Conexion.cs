@@ -170,7 +170,7 @@ namespace ManaCar.Clases
         public void insertarCliente(string nombre, string apellidos, string dni, DateTime fecha_entrada, DateTime fecha_salida, string matricula, string marca, string modelo, string parking)
         {
 
-            string queryInsert ="Insert into clientes  (nombre, apellidos,dni,fecha_entrada,fecha_salida,matricula,marca,modelo,plaza_parking) values ('" + nombre + "','" + apellidos + "','" + dni + "','" + fecha_entrada + "','" + fecha_salida + "','" + matricula + "','" + marca + "','" + modelo + "','" + parking + "')";
+            string queryInsert ="Insert into clientes  (nombre, apellidos,dni,fecha_entrada,fecha_salida,matricula,marca,modelo,plaza_parking) values ('" + nombre + "','" + apellidos + "','" + dni + "','" + fecha_entrada.ToString("yyyyMMdd") + "','" + fecha_salida.ToString("yyyyMMdd") + "','" + matricula + "','" + marca + "','" + modelo + "','" + parking + "')";
             try
             {
                 databaseConnection.Open();
@@ -212,8 +212,6 @@ namespace ManaCar.Clases
                         dc.Modelo = comando.GetString(7);
                         dc.PlazaParking = comando.GetString(8);
                         listaAux.Add(dc);
-
-
                     }
                     return listaAux;
 
@@ -230,9 +228,52 @@ namespace ManaCar.Clases
             }
             return null;
         }
+        public List<DatosClientes> MostrarTodosLosClientes()
+        {
+            List<DatosClientes> listaAux = new List<DatosClientes>();
+            string querySearch = "Select * from clientes";
+            
+            try
+            {
+                databaseConnection.Open();
+                MySqlCommand comandDatabase = new MySqlCommand(querySearch, databaseConnection);
+                comando = comandDatabase.ExecuteReader();
+                if (comando.HasRows)
+                {
+                    while (comando.Read())
+                    {
+
+                        DatosClientes dc = new DatosClientes();
+                        dc.Nombre = comando.GetString(0);
+                        dc.Apellidos = comando.GetString(1);
+                        dc.Dni = comando.GetString(2);
+                        dc.FechaEntrada = comando.GetDateTime(3);
+                        dc.FechaSalida = comando.GetDateTime(4);
+                        dc.Matricula = comando.GetString(5);
+                        dc.Marca = comando.GetString(6);
+                        dc.Modelo = comando.GetString(7);
+                        dc.PlazaParking = comando.GetString(8);
+                        listaAux.Add(dc);
+                    }
+                    return listaAux;
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+            return null;
+        }
+
         public void actualizarDatosClientes(string nombre, string apellidos, string dni, DateTime fecha_entrada, DateTime fecha_salida, string matricula, string marca, string modelo, string parking)
         {
-            string queryUpdate = " UPDATE clientes SET nombre= '"+nombre+ "', apellidos= '" + apellidos + "', dni= '" + dni + "', fecha_entrada= '" + fecha_entrada + "', fecha_salida= '" + fecha_salida + "', matricula= '" + matricula + "', marca= '" + marca + "', modelo= '" + modelo + "', plaza_parking='" + parking + "' WHERE dni ='" + dni + "'";
+            string queryUpdate = " UPDATE clientes SET nombre= '"+nombre+ "', apellidos= '" + apellidos + "', dni= '" + dni + "', fecha_entrada= '" + fecha_entrada.ToString("yyyyMMdd") + "', fecha_salida= '" + fecha_salida.ToString("yyyyMMdd") + "', matricula= '" + matricula + "', marca= '" + marca + "', modelo= '" + modelo + "', plaza_parking='" + parking + "' WHERE dni ='" + dni + "'";
             try
             {
                 databaseConnection.Open();
@@ -271,6 +312,7 @@ namespace ManaCar.Clases
             bool encontrado = false;
             string usuario;
             string querySelect = "Select usuario from usuarios where usuario = '" + usuarioIntroducido + "'";
+           
 
             try
             {
@@ -293,6 +335,7 @@ namespace ManaCar.Clases
                         return true;
                     }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -360,6 +403,26 @@ namespace ManaCar.Clases
             
         }
 
+        public void BackUpDataBase(string nombre, string ruta)
+        {
+            string allPath = ruta +'\\'+ nombre + ".sql";
+            
+            try
+            {
+                databaseConnection.Open();
+                MySqlCommand comando = new MySqlCommand(null,databaseConnection);
+                MySqlBackup resplado = new MySqlBackup(comando);
+                resplado.ExportToFile(allPath);
+                
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+        }
       
         
     }

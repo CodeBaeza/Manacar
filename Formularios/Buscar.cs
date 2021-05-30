@@ -23,14 +23,24 @@ namespace ManaCar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
             List<DatosClientes> auxiliar = new List<DatosClientes>();
 
-            for(int i = 0; i< con.MostrarCliente(tbBuscarDNI.Text).Count; i++)
-            {
-                DatosClientes dc = con.MostrarCliente(tbBuscarDNI.Text)[i];
-                auxiliar.Add(dc);
-                lbUsuarios.Items.AddRange(auxiliar.ToArray());
-            }
+            lbUsuarios.Items.Clear();
+                
+                if (tbBuscarDNI.Text.Length> 0) {
+                    auxiliar = con.MostrarCliente(tbBuscarDNI.Text);                              
+                    lbUsuarios.Items.AddRange(auxiliar.ToArray());               
+                }
+                else
+                {
+                    auxiliar = con.MostrarTodosLosClientes();
+                    lbUsuarios.Items.AddRange(auxiliar.ToArray());
+                    
+                    
+                }
+               
+            
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)

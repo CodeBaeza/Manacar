@@ -35,7 +35,6 @@ namespace ManaCar
             this.label2 = new System.Windows.Forms.Label();
             this.tbNombreCS = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbPathCS = new System.Windows.Forms.TextBox();
             this.btnPathCopia = new System.Windows.Forms.Button();
             this.btnGuardarCS = new System.Windows.Forms.Button();
             this.lvHistorialCopiaCS = new System.Windows.Forms.ListView();
@@ -45,6 +44,7 @@ namespace ManaCar
             this.label4 = new System.Windows.Forms.Label();
             this.btnBuscarCS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbPathCS = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,13 +89,6 @@ namespace ManaCar
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha";
-            // 
-            // tbPathCS
-            // 
-            this.tbPathCS.Location = new System.Drawing.Point(12, 84);
-            this.tbPathCS.Name = "tbPathCS";
-            this.tbPathCS.Size = new System.Drawing.Size(271, 20);
-            this.tbPathCS.TabIndex = 3;
             // 
             // btnPathCopia
             // 
@@ -176,6 +169,13 @@ namespace ManaCar
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // tbPathCS
+            // 
+            this.tbPathCS.Location = new System.Drawing.Point(12, 84);
+            this.tbPathCS.Name = "tbPathCS";
+            this.tbPathCS.Size = new System.Drawing.Size(271, 20);
+            this.tbPathCS.TabIndex = 3;
+            // 
             // CopiaSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +213,6 @@ namespace ManaCar
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbNombreCS;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbPathCS;
         private System.Windows.Forms.Button btnPathCopia;
         private System.Windows.Forms.Button btnGuardarCS;
         private System.Windows.Forms.ListView lvHistorialCopiaCS;
@@ -223,5 +222,6 @@ namespace ManaCar
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscarCS;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox tbPathCS;
     }
 }

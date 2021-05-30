@@ -46,8 +46,9 @@ namespace ManaCar
             this.eliminarUsuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.utilidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.copiaSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.generarPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelUsuario = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -171,9 +172,16 @@ namespace ManaCar
             // copiaSeguridadToolStripMenuItem
             // 
             this.copiaSeguridadToolStripMenuItem.Name = "copiaSeguridadToolStripMenuItem";
-            this.copiaSeguridadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copiaSeguridadToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.copiaSeguridadToolStripMenuItem.Text = "Copia seguridad";
             this.copiaSeguridadToolStripMenuItem.Click += new System.EventHandler(this.copiaSeguridadToolStripMenuItem_Click);
+            // 
+            // generarPDFToolStripMenuItem
+            // 
+            this.generarPDFToolStripMenuItem.Name = "generarPDFToolStripMenuItem";
+            this.generarPDFToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.generarPDFToolStripMenuItem.Text = "Generar PDF";
+            this.generarPDFToolStripMenuItem.Click += new System.EventHandler(this.generarPDFToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -184,12 +192,14 @@ namespace ManaCar
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // generarPDFToolStripMenuItem
+            // labelUsuario
             // 
-            this.generarPDFToolStripMenuItem.Name = "generarPDFToolStripMenuItem";
-            this.generarPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.generarPDFToolStripMenuItem.Text = "Generar PDF";
-            this.generarPDFToolStripMenuItem.Click += new System.EventHandler(this.generarPDFToolStripMenuItem_Click);
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Location = new System.Drawing.Point(242, 314);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(35, 13);
+            this.labelUsuario.TabIndex = 13;
+            this.labelUsuario.Text = "label1";
             // 
             // MenuAdministracion
             // 
@@ -197,6 +207,7 @@ namespace ManaCar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(289, 336);
+            this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBuscarA);
             this.Controls.Add(this.btnRegistroA);
@@ -207,6 +218,7 @@ namespace ManaCar
             this.Name = "MenuAdministracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración";
+            this.Load += new System.EventHandler(this.MenuAdministracion_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -234,5 +246,6 @@ namespace ManaCar
         private System.Windows.Forms.ToolStripMenuItem copiaSeguridadToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem generarPDFToolStripMenuItem;
+        private System.Windows.Forms.Label labelUsuario;
     }
 }
