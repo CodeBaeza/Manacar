@@ -25,21 +25,20 @@ namespace ManaCar
         {
             
             List<DatosClientes> auxiliar = new List<DatosClientes>();
-
+           
             lbUsuarios.Items.Clear();
-                
-                if (tbBuscarDNI.Text.Length> 0) {
-                    auxiliar = con.MostrarCliente(tbBuscarDNI.Text);                              
-                    lbUsuarios.Items.AddRange(auxiliar.ToArray());               
-                }
-                else
-                {
-                    auxiliar = con.MostrarTodosLosClientes();
-                    lbUsuarios.Items.AddRange(auxiliar.ToArray());
-                    
-                    
-                }
-               
+
+            if (tbBuscarDNI.Text.Length > 0)
+            {
+                auxiliar = con.MostrarCliente(tbBuscarDNI.Text);
+                lbUsuarios.Items.AddRange(auxiliar.ToArray());
+            }
+            else
+            {
+                auxiliar = con.MostrarTodosLosClientes();
+                lbUsuarios.Items.AddRange(auxiliar.ToArray());
+            }
+            
             
         }
 
@@ -52,10 +51,13 @@ namespace ManaCar
                 de.setDcData(dc);
                 de.ShowDialog();
                 this.Close();
-            }
-            
+            }          
         }
 
-       
+        private void Buscar_Load(object sender, EventArgs e)
+        {
+            UsuarioActivo us = new UsuarioActivo();
+            this.Text = "Buscar, Usuario Activo: " + us.Activo;
+        }
     }
 }

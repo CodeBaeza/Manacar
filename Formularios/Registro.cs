@@ -60,7 +60,12 @@ namespace ManaCar
 
         }
 
-            }
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            UsuarioActivo us = new UsuarioActivo();
+            this.Text = "Registro, Usuario activo: " + us.Activo;
+        }
+    }
     }
 
         

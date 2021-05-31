@@ -1,4 +1,5 @@
-﻿using ManaCar.Formularios;
+﻿using ManaCar.Clases;
+using ManaCar.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,7 +79,8 @@ namespace ManaCar
 
         private void MenuAdministracion_Load(object sender, EventArgs e)
         {
-            this.Text = "Adminstracion " + "PEPE";
+            UsuarioActivo us = new UsuarioActivo();
+            this.Text = "Adminstracion " + us.Activo;
         }
     }
 }

@@ -60,5 +60,11 @@ namespace ManaCar.Formularios
             Buscar bc = new Buscar();
             bc.Show();
         }
+
+        private void DatosEncontrados_Load(object sender, EventArgs e)
+        {
+            UsuarioActivo us = new UsuarioActivo();
+            this.Text = "Datos encontrado, Usuario activo: " + us.Activo;
+        }
     }
 }

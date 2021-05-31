@@ -16,10 +16,10 @@ namespace ManaCar.Formularios
     public partial class DocumentoPDF : Form
     {
         Conexion con = new Conexion();
+        
         public DocumentoPDF()
         {
             InitializeComponent();
-            con.generarPDF();
             OpenFileDialog abrir = new OpenFileDialog();
             abrir.ShowDialog();
             axAcroPDF1.src = abrir.FileName;

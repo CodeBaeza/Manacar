@@ -14,6 +14,7 @@ namespace ManaCar.Clases
 {
     class Conexion
     {
+        
         MySqlDataReader comando;
         static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=manacar;Convert Zero Datetime=True;";
         MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -38,6 +39,8 @@ namespace ManaCar.Clases
                         if (usuarioIntroducido == usuario && contraseña == pass)
                         {
                             encontrado = true;
+                            UsuarioActivo us = new UsuarioActivo();
+                            us.Activo = usuario;                           
                         }
                     }
                     if (encontrado == true)
@@ -347,11 +350,14 @@ namespace ManaCar.Clases
             }
             return false;
         }
-        public void generarPDF()
+        public void generarPDF(DateTime fecha_entrada, DateTime fecha_salida, string nombrePDF)
         {
-            string querySearch = "Select * from clientes";
+            string querySearch = "Select * from clientes where fecha_entrada >= '"+fecha_entrada.ToString("yyyyMMdd") + "' and fecha_salida <='"+fecha_salida.ToString("yyyyMMdd")+ "'";
+            string ruta = "C:\\Users\\Cristian\\Desktop\\Proyecto\\ManaCar\\ManaCar\\PDF";
+            
+            string allPath = ruta + '\\' + nombrePDF+".pdf";
             Document doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream("Lista.pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream(allPath, FileMode.Create));
             doc.Open();
             Paragraph title = new Paragraph();
             title.Font = FontFactory.GetFont(FontFactory.TIMES, 28f, BaseColor.BLUE);

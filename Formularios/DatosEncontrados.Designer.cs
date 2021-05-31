@@ -274,6 +274,7 @@ namespace ManaCar.Formularios
             this.Controls.Add(this.btnGuardarEncontrado);
             this.Name = "DatosEncontrados";
             this.Text = "Datos del cliente";
+            this.Load += new System.EventHandler(this.DatosEncontrados_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

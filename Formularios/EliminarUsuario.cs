@@ -24,6 +24,7 @@ namespace ManaCar
 
         private void btnEliminarE_Click(object sender, EventArgs e)
         {
+            UsuarioActivo us = new UsuarioActivo();
             string usuario = tbEliminarUsuarioE.Text;
             if (usuario.Length <= 0)
             {
@@ -33,7 +34,12 @@ namespace ManaCar
             {
                 if (con.buscarUsuarios(usuario) == usuario)
                 {
-                    if((MessageBox.Show("Usuario: "+usuario+" encontrado, ¿Desea eliminarlo?","Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes) {
+                    if(usuario == us.Activo)
+                    {
+                        MessageBox.Show("No puedes eliminar el usuario que estas utilizando", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }else if((MessageBox.Show("Usuario: "+usuario+" encontrado, ¿Desea eliminarlo?","Aviso",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes) 
+                    {
                         con.eliminarUsuario(usuario);
                         MessageBox.Show("Usuario eliminado satisfactoriamente ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tbEliminarUsuarioE.Text = "";
@@ -59,9 +65,13 @@ namespace ManaCar
         {
       
             dgvMostrarUsuarios.DataSource = con.mostrarLista();
-            
+              
+        }
 
-            
+        private void EliminarUsuario_Load(object sender, EventArgs e)
+        {
+            UsuarioActivo us = new UsuarioActivo();
+            this.Text = "Eliminar usuario: " + us.Activo;
         }
     }
 }

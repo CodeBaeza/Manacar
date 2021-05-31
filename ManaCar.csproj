@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="Clases\Backup.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\UsuarioActivo.cs" />
     <Compile Include="Clases\UsuariosSistema.cs" />
     <Compile Include="Formularios\CopiaSeguridad.cs">
       <SubType>Form</SubType>
@@ -135,11 +136,11 @@
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\DatosClientes.cs" />
-    <Compile Include="Formularios\Generar PDF.cs">
+    <Compile Include="Formularios\GenerarPDF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Generar PDF.Designer.cs">
-      <DependentUpon>Generar PDF.cs</DependentUpon>
+    <Compile Include="Formularios\GenerarPDF.Designer.cs">
+      <DependentUpon>GenerarPDF.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\NuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -182,8 +183,8 @@
     <EmbeddedResource Include="Formularios\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Generar PDF.resx">
-      <DependentUpon>Generar PDF.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\GenerarPDF.resx">
+      <DependentUpon>GenerarPDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuAdministracion.resx">
       <DependentUpon>MenuAdministracion.cs</DependentUpon>
@@ -244,6 +245,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CopiaSeguridad\" />
+    <Folder Include="PDF\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

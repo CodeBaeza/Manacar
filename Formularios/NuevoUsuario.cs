@@ -50,5 +50,12 @@ namespace ManaCar
             tbUsuarioN.Text ="";
             tbContraseñaN.Text ="";
         }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
+        {
+            UsuarioActivo us = new UsuarioActivo();
+            this.Text = "Nuevo usuario, Usuario activo: " + us.Activo;
+        }
+        
     }
 }
