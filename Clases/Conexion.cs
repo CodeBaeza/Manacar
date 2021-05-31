@@ -413,12 +413,14 @@ namespace ManaCar.Clases
         {
             string allPath = ruta +'\\'+ nombre + ".sql";
             
+            
             try
             {
                 databaseConnection.Open();
                 MySqlCommand comando = new MySqlCommand(null,databaseConnection);
                 MySqlBackup resplado = new MySqlBackup(comando);
                 resplado.ExportToFile(allPath);
+                
                 
             }catch (Exception ex)
             {

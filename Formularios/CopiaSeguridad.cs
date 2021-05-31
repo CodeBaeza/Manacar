@@ -15,7 +15,7 @@ namespace ManaCar
     {
         Backup bp;
         Conexion con = new Conexion();
-        static List<Backup> listaBackup;
+        
         
         public CopiaSeguridad()
         {
@@ -44,8 +44,9 @@ namespace ManaCar
                 listaCopiaSeguridad.SubItems.Add(bp.Path);
                 listaCopiaSeguridad.SubItems.Add(bp.Fecha.ToString());
                 lvHistorialCopiaCS.Items.Add(listaCopiaSeguridad);
-                //listaBackup.Add(bp);
+                
                 con.BackUpDataBase(nombreDocumento,ruta);
+            MessageBox.Show("Copia de seguridad guardada correctamente", "Copia de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             
 

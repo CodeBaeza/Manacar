@@ -60,20 +60,20 @@ namespace ManaCar
             // 
             this.tbUsuarioN.Location = new System.Drawing.Point(28, 44);
             this.tbUsuarioN.Name = "tbUsuarioN";
-            this.tbUsuarioN.Size = new System.Drawing.Size(199, 20);
+            this.tbUsuarioN.Size = new System.Drawing.Size(301, 20);
             this.tbUsuarioN.TabIndex = 1;
             // 
             // tbContraseñaN
             // 
             this.tbContraseñaN.Location = new System.Drawing.Point(28, 83);
             this.tbContraseñaN.Name = "tbContraseñaN";
-            this.tbContraseñaN.Size = new System.Drawing.Size(199, 20);
+            this.tbContraseñaN.Size = new System.Drawing.Size(301, 20);
             this.tbContraseñaN.TabIndex = 2;
             // 
             // btnCrearUsuarioN
             // 
             this.btnCrearUsuarioN.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnCrearUsuarioN.Location = new System.Drawing.Point(28, 129);
+            this.btnCrearUsuarioN.Location = new System.Drawing.Point(28, 109);
             this.btnCrearUsuarioN.Name = "btnCrearUsuarioN";
             this.btnCrearUsuarioN.Size = new System.Drawing.Size(75, 23);
             this.btnCrearUsuarioN.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace ManaCar
             // btnLimpiarN
             // 
             this.btnLimpiarN.BackColor = System.Drawing.Color.Khaki;
-            this.btnLimpiarN.Location = new System.Drawing.Point(152, 129);
+            this.btnLimpiarN.Location = new System.Drawing.Point(254, 109);
             this.btnLimpiarN.Name = "btnLimpiarN";
             this.btnLimpiarN.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiarN.TabIndex = 4;
@@ -97,7 +97,7 @@ namespace ManaCar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(258, 183);
+            this.ClientSize = new System.Drawing.Size(357, 164);
             this.Controls.Add(this.btnLimpiarN);
             this.Controls.Add(this.btnCrearUsuarioN);
             this.Controls.Add(this.tbContraseñaN);
@@ -106,6 +106,7 @@ namespace ManaCar
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "NuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear nuevo usuario";
