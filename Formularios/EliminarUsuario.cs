@@ -74,7 +74,7 @@ namespace ManaCar
         private void EliminarUsuario_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Eliminar usuario, Conectado: " + us.Activo;
+            this.Text = "Eliminar usuario - " + us.Activo;
         }
     }
 }

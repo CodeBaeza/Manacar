@@ -30,7 +30,7 @@ namespace ManaCar.Formularios
         private void Generar_PDF_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Generar PDF, Conectado: " + us.Activo;
+            this.Text = "Generar PDF - " + us.Activo;
         }
     }
 }

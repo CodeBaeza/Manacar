@@ -28,13 +28,22 @@ namespace ManaCar
             if (tbBuscarDNI.Text.Length > 0)
             {
                 auxiliar = con.MostrarCliente(tbBuscarDNI.Text);
-                lbUsuarios.Items.AddRange(auxiliar.ToArray());
+                if (auxiliar == null)
+                {
+                    MessageBox.Show("El cliente no se encuentra en la base de datos");
+                }
+                else
+                { 
+                    lbUsuarios.Items.AddRange(auxiliar.ToArray());
+                }
+               
             }
             else
             {
                 auxiliar = con.MostrarTodosLosClientes();
                 lbUsuarios.Items.AddRange(auxiliar.ToArray());
-            }                
+            }
+           
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
@@ -52,7 +61,7 @@ namespace ManaCar
         private void Buscar_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Buscar, Conectado: " + us.Activo;
+            this.Text = "Buscar - " + us.Activo;
         }
     }
 }

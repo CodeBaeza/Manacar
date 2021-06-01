@@ -24,7 +24,7 @@ namespace ManaCar
         private void CopiaSeguridad_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Copia de seguridad, Conectado: " + us.Activo;
+            this.Text = "Copia de seguridad - " + us.Activo;
         }
 
         private void btnPathCopia_Click(object sender, EventArgs e)

@@ -30,20 +30,6 @@ namespace ManaCar
             Buscar b = new Buscar();
             b.ShowDialog();
         }
-     
-
-
-                 
-
-      
-
-        
-
-        
-
-       
-
-       
 
         private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -79,8 +65,8 @@ namespace ManaCar
 
         private void MenuAdministracion_Load(object sender, EventArgs e)
         {
-            UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Administracion, Conectado: " + us.Activo;
+            UsuarioActivo us = new UsuarioActivo();           
+            this.Text = "Administracion - "+us.Activo;
         }
     }
 }

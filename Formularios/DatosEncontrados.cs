@@ -62,7 +62,7 @@ namespace ManaCar.Formularios
         private void DatosEncontrados_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Datos encontrado, Conectado: " + us.Activo;
+            this.Text = "Datos encontrado - " + us.Activo;
         }
     }
 }

@@ -48,7 +48,6 @@ namespace ManaCar
             this.copiaSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelUsuario = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +100,7 @@ namespace ManaCar
             this.btnRegistroA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnRegistroA.Location = new System.Drawing.Point(12, 45);
             this.btnRegistroA.Name = "btnRegistroA";
-            this.btnRegistroA.Size = new System.Drawing.Size(250, 23);
+            this.btnRegistroA.Size = new System.Drawing.Size(290, 23);
             this.btnRegistroA.TabIndex = 1;
             this.btnRegistroA.Text = "Registro";
             this.btnRegistroA.UseVisualStyleBackColor = false;
@@ -112,7 +111,7 @@ namespace ManaCar
             this.btnBuscarA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnBuscarA.Location = new System.Drawing.Point(12, 74);
             this.btnBuscarA.Name = "btnBuscarA";
-            this.btnBuscarA.Size = new System.Drawing.Size(250, 23);
+            this.btnBuscarA.Size = new System.Drawing.Size(290, 23);
             this.btnBuscarA.TabIndex = 2;
             this.btnBuscarA.Text = "Buscar";
             this.btnBuscarA.UseVisualStyleBackColor = false;
@@ -126,7 +125,7 @@ namespace ManaCar
             this.utilidadesToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(289, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(314, 24);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -186,28 +185,18 @@ namespace ManaCar
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::ManaCar.Properties.Resources.manacar1;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 103);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 103);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(197, 184);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // labelUsuario
-            // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Location = new System.Drawing.Point(242, 314);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(35, 13);
-            this.labelUsuario.TabIndex = 13;
-            this.labelUsuario.Text = "label1";
             // 
             // MenuAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(289, 336);
-            this.Controls.Add(this.labelUsuario);
+            this.ClientSize = new System.Drawing.Size(314, 338);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBuscarA);
             this.Controls.Add(this.btnRegistroA);
@@ -247,6 +236,5 @@ namespace ManaCar
         private System.Windows.Forms.ToolStripMenuItem copiaSeguridadToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem generarPDFToolStripMenuItem;
-        private System.Windows.Forms.Label labelUsuario;
     }
 }

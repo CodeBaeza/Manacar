@@ -68,7 +68,7 @@ namespace ManaCar.Formularios
             // 
             this.tbNombreEncontrado.Location = new System.Drawing.Point(6, 43);
             this.tbNombreEncontrado.Name = "tbNombreEncontrado";
-            this.tbNombreEncontrado.Size = new System.Drawing.Size(105, 20);
+            this.tbNombreEncontrado.Size = new System.Drawing.Size(162, 20);
             this.tbNombreEncontrado.TabIndex = 1;
             // 
             // label2
@@ -84,7 +84,7 @@ namespace ManaCar.Formularios
             // 
             this.tbApellidosEncontados.Location = new System.Drawing.Point(5, 82);
             this.tbApellidosEncontados.Name = "tbApellidosEncontados";
-            this.tbApellidosEncontados.Size = new System.Drawing.Size(106, 20);
+            this.tbApellidosEncontados.Size = new System.Drawing.Size(163, 20);
             this.tbApellidosEncontados.TabIndex = 2;
             // 
             // label3
@@ -100,7 +100,7 @@ namespace ManaCar.Formularios
             // 
             this.tbDNIEncontrado.Location = new System.Drawing.Point(5, 121);
             this.tbDNIEncontrado.Name = "tbDNIEncontrado";
-            this.tbDNIEncontrado.Size = new System.Drawing.Size(106, 20);
+            this.tbDNIEncontrado.Size = new System.Drawing.Size(163, 20);
             this.tbDNIEncontrado.TabIndex = 3;
             // 
             // label4
@@ -169,21 +169,21 @@ namespace ManaCar.Formularios
             // 
             this.tbMatriculaEncontrada.Location = new System.Drawing.Point(6, 40);
             this.tbMatriculaEncontrada.Name = "tbMatriculaEncontrada";
-            this.tbMatriculaEncontrada.Size = new System.Drawing.Size(137, 20);
+            this.tbMatriculaEncontrada.Size = new System.Drawing.Size(140, 20);
             this.tbMatriculaEncontrada.TabIndex = 6;
             // 
             // tbMarcaEncontrada
             // 
             this.tbMarcaEncontrada.Location = new System.Drawing.Point(6, 79);
             this.tbMarcaEncontrada.Name = "tbMarcaEncontrada";
-            this.tbMarcaEncontrada.Size = new System.Drawing.Size(137, 20);
+            this.tbMarcaEncontrada.Size = new System.Drawing.Size(140, 20);
             this.tbMarcaEncontrada.TabIndex = 7;
             // 
             // tbModeloEncontrado
             // 
             this.tbModeloEncontrado.Location = new System.Drawing.Point(6, 118);
             this.tbModeloEncontrado.Name = "tbModeloEncontrado";
-            this.tbModeloEncontrado.Size = new System.Drawing.Size(137, 20);
+            this.tbModeloEncontrado.Size = new System.Drawing.Size(140, 20);
             this.tbModeloEncontrado.TabIndex = 8;
             // 
             // label9
@@ -199,15 +199,15 @@ namespace ManaCar.Formularios
             // 
             this.tbPlazaParkingEncontrado.Location = new System.Drawing.Point(6, 160);
             this.tbPlazaParkingEncontrado.Name = "tbPlazaParkingEncontrado";
-            this.tbPlazaParkingEncontrado.Size = new System.Drawing.Size(137, 20);
+            this.tbPlazaParkingEncontrado.Size = new System.Drawing.Size(71, 20);
             this.tbPlazaParkingEncontrado.TabIndex = 9;
             // 
             // btnGuardarEncontrado
             // 
             this.btnGuardarEncontrado.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnGuardarEncontrado.Location = new System.Drawing.Point(160, 215);
+            this.btnGuardarEncontrado.Location = new System.Drawing.Point(190, 214);
             this.btnGuardarEncontrado.Name = "btnGuardarEncontrado";
-            this.btnGuardarEncontrado.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarEncontrado.Size = new System.Drawing.Size(73, 23);
             this.btnGuardarEncontrado.TabIndex = 10;
             this.btnGuardarEncontrado.Text = "Guardar";
             this.btnGuardarEncontrado.UseVisualStyleBackColor = false;
@@ -216,9 +216,9 @@ namespace ManaCar.Formularios
             // btnEliminarEncontrado
             // 
             this.btnEliminarEncontrado.BackColor = System.Drawing.Color.LightCoral;
-            this.btnEliminarEncontrado.Location = new System.Drawing.Point(241, 215);
+            this.btnEliminarEncontrado.Location = new System.Drawing.Point(269, 215);
             this.btnEliminarEncontrado.Name = "btnEliminarEncontrado";
-            this.btnEliminarEncontrado.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarEncontrado.Size = new System.Drawing.Size(73, 23);
             this.btnEliminarEncontrado.TabIndex = 11;
             this.btnEliminarEncontrado.Text = "Eliminar";
             this.btnEliminarEncontrado.UseVisualStyleBackColor = false;
@@ -239,7 +239,7 @@ namespace ManaCar.Formularios
             this.groupBox1.Controls.Add(this.dtpFechaSalida);
             this.groupBox1.Location = new System.Drawing.Point(12, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(142, 248);
+            this.groupBox1.Size = new System.Drawing.Size(172, 223);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
@@ -255,9 +255,9 @@ namespace ManaCar.Formularios
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tbModeloEncontrado);
-            this.groupBox2.Location = new System.Drawing.Point(160, 18);
+            this.groupBox2.Location = new System.Drawing.Point(190, 18);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(156, 193);
+            this.groupBox2.Size = new System.Drawing.Size(152, 193);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del vehículo";
@@ -267,7 +267,7 @@ namespace ManaCar.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(335, 269);
+            this.ClientSize = new System.Drawing.Size(360, 256);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEliminarEncontrado);
