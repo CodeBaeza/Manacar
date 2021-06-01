@@ -16,7 +16,6 @@ namespace ManaCar
     {
         public MenuAdministracion()
         {
-
             InitializeComponent();
         }
 
@@ -25,6 +24,7 @@ namespace ManaCar
             Registro reg = new Registro();
             reg.ShowDialog();
         }
+
         private void btnModificarA_Click(object sender, EventArgs e)
         {
             Buscar b = new Buscar();
@@ -80,7 +80,7 @@ namespace ManaCar
         private void MenuAdministracion_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Adminstracion " + us.Activo;
+            this.Text = "Administracion, Conectado: " + us.Activo;
         }
     }
 }

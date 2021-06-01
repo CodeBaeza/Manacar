@@ -34,7 +34,7 @@ namespace ManaCar
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.tbCorreo = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,12 +85,12 @@ namespace ManaCar
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // tbCorreo
+            // tbUsuario
             // 
-            this.tbCorreo.Location = new System.Drawing.Point(62, 205);
-            this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.Size = new System.Drawing.Size(213, 20);
-            this.tbCorreo.TabIndex = 1;
+            this.tbUsuario.Location = new System.Drawing.Point(62, 205);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(213, 20);
+            this.tbUsuario.TabIndex = 1;
             // 
             // tbPass
             // 
@@ -146,7 +146,7 @@ namespace ManaCar
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPass);
-            this.Controls.Add(this.tbCorreo);
+            this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.menuStrip1);
@@ -170,7 +170,7 @@ namespace ManaCar
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.TextBox tbCorreo;
+        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

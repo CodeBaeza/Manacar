@@ -24,6 +24,7 @@ namespace ManaCar
 
         private void btnEliminarE_Click(object sender, EventArgs e)
         {
+            List<UsuariosSistema> auxiliar = new List<UsuariosSistema>();
             UsuarioActivo us = new UsuarioActivo();
             string usuario = tbEliminarUsuarioE.Text;
             if (usuario.Length <= 0)
@@ -43,17 +44,18 @@ namespace ManaCar
                         con.eliminarUsuario(usuario);
                         MessageBox.Show("Usuario eliminado satisfactoriamente ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tbEliminarUsuarioE.Text = "";
-                        dgvMostrarUsuarios.DataSource= con.mostrarLista();
-                    }
-                    
+                        lbUsuarios.Items.Clear();
+                        auxiliar = con.mostrarLista();
+                        lbUsuarios.Items.AddRange(auxiliar.ToArray());
+                        
+
+                    }                  
                 }
                 else
                 {
                     MessageBox.Show("Usuario no encontrado, compruebe que el usuario esta bien escrito ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tbEliminarUsuarioE.Text = "";
-                }
-                
-                
+                }                
             }
             else
             {
@@ -63,15 +65,16 @@ namespace ManaCar
 
         private void btnMostrarUsuarios_Click(object sender, EventArgs e)
         {
-      
-            dgvMostrarUsuarios.DataSource = con.mostrarLista();
-              
+            List<UsuariosSistema> auxiliar = new List<UsuariosSistema>();
+            lbUsuarios.Items.Clear();
+            auxiliar = con.mostrarLista();
+            lbUsuarios.Items.AddRange(auxiliar.ToArray());             
         }
 
         private void EliminarUsuario_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Eliminar usuario: " + us.Activo;
+            this.Text = "Eliminar usuario, Conectado: " + us.Activo;
         }
     }
 }

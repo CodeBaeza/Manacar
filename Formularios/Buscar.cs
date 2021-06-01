@@ -23,11 +23,8 @@ namespace ManaCar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
             List<DatosClientes> auxiliar = new List<DatosClientes>();
-           
             lbUsuarios.Items.Clear();
-
             if (tbBuscarDNI.Text.Length > 0)
             {
                 auxiliar = con.MostrarCliente(tbBuscarDNI.Text);
@@ -37,9 +34,7 @@ namespace ManaCar
             {
                 auxiliar = con.MostrarTodosLosClientes();
                 lbUsuarios.Items.AddRange(auxiliar.ToArray());
-            }
-            
-            
+            }                
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
@@ -57,7 +52,7 @@ namespace ManaCar
         private void Buscar_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Buscar, Usuario Activo: " + us.Activo;
+            this.Text = "Buscar, Conectado: " + us.Activo;
         }
     }
 }

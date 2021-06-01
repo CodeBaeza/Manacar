@@ -45,15 +45,13 @@ namespace ManaCar.Formularios
             dc.Marca = tbMarcaEncontrada.Text;
             dc.PlazaParking = tbPlazaParkingEncontrado.Text;
 
-
             con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
             MessageBox.Show("Datos actualizados correctamente");
             this.Close();
         }
 
         private void btnEliminarEncontrado_Click(object sender, EventArgs e)
-        {
-            
+        {          
             con.eliminarDatosClientes(tbDNIEncontrado.Text);
             MessageBox.Show("Datos eliminados correctamente");
             this.Close();
@@ -64,7 +62,7 @@ namespace ManaCar.Formularios
         private void DatosEncontrados_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Datos encontrado, Usuario activo: " + us.Activo;
+            this.Text = "Datos encontrado, Conectado: " + us.Activo;
         }
     }
 }

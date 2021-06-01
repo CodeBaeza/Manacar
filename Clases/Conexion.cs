@@ -50,7 +50,7 @@ namespace ManaCar.Clases
                     }
                     else
                     {
-                        MessageBox.Show("Usuario no encontrado");
+                        MessageBox.Show("Usuario no encontrado, comprueba si tus credenciales estan bien escritas,","Atención",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                 }
             }
@@ -65,7 +65,6 @@ namespace ManaCar.Clases
         }
         public void nuevoUsuario(string usuario, string contraseña)
         {
-
             string queryInsert = "Insert into usuarios (usuario, contraseña) values ('" + usuario + "','" + contraseña + "');";
             try
             {
@@ -142,7 +141,6 @@ namespace ManaCar.Clases
         {
             List<UsuariosSistema> listaUsuarios = new List<UsuariosSistema>();
             string querySearch = "Select * from usuarios;";
-
             try
             {
                 databaseConnection.Open();
@@ -153,8 +151,7 @@ namespace ManaCar.Clases
                     while (comando.Read())
                     {
                         UsuariosSistema us = new UsuariosSistema();
-                        us.Usuario = comando.GetString(0);
-                        //us.Password = comando.GetString(1);
+                        us.Usuario = comando.GetString(0);                     
                         listaUsuarios.Add(us);
                     }
                     return listaUsuarios;
@@ -172,7 +169,6 @@ namespace ManaCar.Clases
         }
         public void insertarCliente(string nombre, string apellidos, string dni, DateTime fecha_entrada, DateTime fecha_salida, string matricula, string marca, string modelo, string parking)
         {
-
             string queryInsert ="Insert into clientes  (nombre, apellidos,dni,fecha_entrada,fecha_salida,matricula,marca,modelo,plaza_parking) values ('" + nombre + "','" + apellidos + "','" + dni + "','" + fecha_entrada.ToString("yyyyMMdd") + "','" + fecha_salida.ToString("yyyyMMdd") + "','" + matricula + "','" + marca + "','" + modelo + "','" + parking + "')";
             try
             {
@@ -193,7 +189,6 @@ namespace ManaCar.Clases
         {
             List<DatosClientes> listaAux = new List<DatosClientes>();
             string querySearch = "Select nombre, apellidos, dni, fecha_entrada, fecha_salida, matricula, marca, modelo, plaza_parking from clientes where dni ='" + dni + "' ;";
-
             try
             {
                 databaseConnection.Open();
@@ -203,7 +198,6 @@ namespace ManaCar.Clases
                 {
                     while (comando.Read())
                     {
-
                         DatosClientes dc = new DatosClientes();
                         dc.Nombre = comando.GetString(0);
                         dc.Apellidos = comando.GetString(1);
@@ -217,9 +211,7 @@ namespace ManaCar.Clases
                         listaAux.Add(dc);
                     }
                     return listaAux;
-
                 }
-
             }
             catch (Exception e)
             {
@@ -234,8 +226,7 @@ namespace ManaCar.Clases
         public List<DatosClientes> MostrarTodosLosClientes()
         {
             List<DatosClientes> listaAux = new List<DatosClientes>();
-            string querySearch = "Select * from clientes";
-            
+            string querySearch = "Select * from clientes";         
             try
             {
                 databaseConnection.Open();
@@ -245,7 +236,6 @@ namespace ManaCar.Clases
                 {
                     while (comando.Read())
                     {
-
                         DatosClientes dc = new DatosClientes();
                         dc.Nombre = comando.GetString(0);
                         dc.Apellidos = comando.GetString(1);
@@ -259,9 +249,7 @@ namespace ManaCar.Clases
                         listaAux.Add(dc);
                     }
                     return listaAux;
-
                 }
-
             }
             catch (Exception e)
             {
@@ -315,8 +303,6 @@ namespace ManaCar.Clases
             bool encontrado = false;
             string usuario;
             string querySelect = "Select usuario from usuarios where usuario = '" + usuarioIntroducido + "'";
-           
-
             try
             {
                 databaseConnection.Open();
@@ -337,8 +323,7 @@ namespace ManaCar.Clases
                     {
                         return true;
                     }
-                }
-                
+                }              
             }
             catch (Exception ex)
             {
@@ -353,9 +338,9 @@ namespace ManaCar.Clases
         public void generarPDF(DateTime fecha_entrada, DateTime fecha_salida, string nombrePDF)
         {
             string querySearch = "Select * from clientes where fecha_entrada >= '"+fecha_entrada.ToString("yyyyMMdd") + "' and fecha_salida <='"+fecha_salida.ToString("yyyyMMdd")+ "'";
-            string ruta = "C:\\Users\\Cristian\\Desktop\\Proyecto\\ManaCar\\ManaCar\\PDF";
-            
+            string ruta = "C:\\Users\\Cristian\\Desktop\\Proyecto\\ManaCar\\ManaCar\\PDF";          
             string allPath = ruta + '\\' + nombrePDF+".pdf";
+
             Document doc = new Document();
             PdfWriter.GetInstance(doc, new FileStream(allPath, FileMode.Create));
             doc.Open();
@@ -374,8 +359,6 @@ namespace ManaCar.Clases
                 table.AddCell("marca");
                 table.AddCell("modelo");
                 table.AddCell("parking");
-
-
             try
             {
                 databaseConnection.Open();
@@ -394,8 +377,7 @@ namespace ManaCar.Clases
                         table.AddCell(comando.GetString("plaza_parking"));
                     }
                     doc.Add(table);
-                }
-                   
+                }                 
             }
             catch (Exception ex)
             {
@@ -405,23 +387,18 @@ namespace ManaCar.Clases
             {
                 databaseConnection.Close();
                 doc.Close();
-            }
-            
+            }          
         }
 
         public void BackUpDataBase(string nombre, string ruta)
         {
-            string allPath = ruta +'\\'+ nombre + ".sql";
-            
-            
+            string allPath = ruta +'\\'+ nombre + ".sql";                  
             try
             {
                 databaseConnection.Open();
                 MySqlCommand comando = new MySqlCommand(null,databaseConnection);
                 MySqlBackup resplado = new MySqlBackup(comando);
-                resplado.ExportToFile(allPath);
-                
-                
+                resplado.ExportToFile(allPath);                             
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -430,9 +407,7 @@ namespace ManaCar.Clases
             {
                 databaseConnection.Close();
             }
-        }
-      
-        
+        }      
     }
    }
 

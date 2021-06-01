@@ -17,6 +17,10 @@ namespace ManaCar.Clases
         public string Usuario { get => usuario; set => usuario = value; }
         public string Password { get => password; set => password = value; }
 
-        
+        override
+        public String ToString()
+        {
+            return (Usuario);
+        }
     }
 }

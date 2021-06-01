@@ -16,7 +16,6 @@ namespace ManaCar
         Backup bp;
         Conexion con = new Conexion();
         
-        
         public CopiaSeguridad()
         {
             InitializeComponent();
@@ -25,7 +24,7 @@ namespace ManaCar
         private void CopiaSeguridad_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Copia de seguridad, Usuario activo: " + us.Activo;
+            this.Text = "Copia de seguridad, Conectado: " + us.Activo;
         }
 
         private void btnPathCopia_Click(object sender, EventArgs e)
@@ -46,11 +45,7 @@ namespace ManaCar
                 lvHistorialCopiaCS.Items.Add(listaCopiaSeguridad);
                 
                 con.BackUpDataBase(nombreDocumento,ruta);
-            MessageBox.Show("Copia de seguridad guardada correctamente", "Copia de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            
-
-
+                MessageBox.Show("Copia de seguridad guardada correctamente", "Copia de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

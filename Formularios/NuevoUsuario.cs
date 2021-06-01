@@ -54,7 +54,7 @@ namespace ManaCar
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Nuevo usuario, Usuario activo: " + us.Activo;
+            this.Text = "Nuevo usuario, Conectado: " + us.Activo;
         }
         
     }

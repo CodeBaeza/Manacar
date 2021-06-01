@@ -49,7 +49,7 @@ namespace ManaCar
         override
         public String ToString()
         {
-            return (Nombre + " / " + Apellidos );
+            return (Nombre +" "+ Apellidos );
         }
     }
 }

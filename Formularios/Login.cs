@@ -22,12 +22,22 @@ namespace ManaCar
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            con.Login(tbCorreo.Text, tbPass.Text);
+            if (tbUsuario.Text.Length == 0 && tbPass.Text.Length == 0)
+            {
+                MessageBox.Show("Introduce tus credenciales", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                con.Login(tbUsuario.Text, tbPass.Text);
+                tbUsuario.Text = "";
+                tbPass.Text = "";
+            }
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            tbCorreo.Text = "";
+            tbUsuario.Text = "";
             tbPass.Text = "";
         }
 

@@ -23,9 +23,6 @@ namespace ManaCar.Formularios
             OpenFileDialog abrir = new OpenFileDialog();
             abrir.ShowDialog();
             axAcroPDF1.src = abrir.FileName;
-
-
-
         }
     }
 }

@@ -13,14 +13,7 @@ namespace ManaCar
 {
     public partial class Registro : Form
     {
-        const  int posicionNula = -1;
-       
-        
-        static List<DatosClientes> ListaAuxiliar;
         Conexion con = new Conexion();
-
-
-
         public Registro()
         {
 
@@ -40,14 +33,9 @@ namespace ManaCar
             lista.SubItems.Add(dc.Modelo);
             lista.SubItems.Add(dc.FechaEntrada.ToString());
             lista.SubItems.Add(dc.FechaSalida.ToString());
-
-
-                    
+    
             lvRegistroR.Items.Add(lista);
             
-           
-            
-
             tbNombreR.Text = "";
             tbApellidosR.Text = "";
             tbDNIR.Text = "";
@@ -55,18 +43,15 @@ namespace ManaCar
             tbModeloR.Text = "";
             tbMarcaR.Text = "";
             tbPlazaParking.Text = "";
-
-
-
         }
 
         private void Registro_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();
-            this.Text = "Registro, Usuario activo: " + us.Activo;
+            this.Text = "Registro, Conectado: " + us.Activo;
         }
     }
-    }
+}
 
         
     
