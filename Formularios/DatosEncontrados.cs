@@ -52,7 +52,7 @@ namespace ManaCar.Formularios
                 dc.PlazaParking = tbPlazaParkingEncontrado.Text;
                 if (dc.Dni.Length == 0)
                 {
-                    MessageBox.Show("No puedes dejar el campo DNI vacio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No puedes dejar el campo DNI vacío", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

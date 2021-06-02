@@ -24,7 +24,7 @@ namespace ManaCar
         {
             if (tbUsuario.Text.Length == 0 && tbPass.Text.Length == 0)
             {
-                MessageBox.Show("Introduce tus credenciales", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Introduzca sus credenciales", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace ManaCar
 
         private void opcionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Quiere salir de la aplicacion", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Quiere salir de la aplicación?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

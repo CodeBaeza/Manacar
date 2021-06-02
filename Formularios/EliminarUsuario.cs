@@ -29,7 +29,7 @@ namespace ManaCar
             string usuario = tbEliminarUsuarioE.Text;
             if (usuario.Length <= 0)
             {
-                MessageBox.Show("No puedes dejar el campo vacio si deseas eliminar ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El campo esta vacío", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if (usuario.Length > 0)
             {
