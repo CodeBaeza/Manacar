@@ -30,7 +30,7 @@ namespace ManaCar
                 auxiliar = con.MostrarCliente(tbBuscarDNI.Text);
                 if (auxiliar == null)
                 {
-                    MessageBox.Show("El cliente no se encuentra en la base de datos");
+                    MessageBox.Show("El cliente no se encuentra en la base de datos.","Atención",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
                 else
                 { 

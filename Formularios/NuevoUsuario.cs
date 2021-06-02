@@ -38,7 +38,7 @@ namespace ManaCar
                 else 
                 {
                     con.nuevoUsuario(tbUsuarioN.Text, tbContraseñaN.Text);
-                    MessageBox.Show("Usuario creado satisfactoriamente.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario creado satisfactoriamente.", "Nuevo usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tbUsuarioN.Text = "";
                     tbContraseñaN.Text = "";
                 }
