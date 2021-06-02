@@ -81,6 +81,45 @@ namespace ManaCar.Clases
                 databaseConnection.Close();
             }
         }
+
+        public bool ComprobarDni(string dniRecibido)
+        {
+            string dni;
+            bool encontrado = false;
+            string query = "SELECT dni FROM clientes where dni = '" + dniRecibido + "'";
+            try
+            {
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                comando = commandDatabase.ExecuteReader();
+                if (comando.HasRows)
+                {
+                    while (comando.Read())
+                    {
+                        string[] row = { comando.GetString(0) };
+                        dni = row[0];
+                     
+                        if (dniRecibido == dni)
+                        {
+                           encontrado = true;
+                        }
+                    }
+                    if(encontrado == true)
+                    {
+                        return true;
+                    }
+                }              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+            return false;
+        }
         public void eliminarUsuario(string usuario)
         {
             string queryDelete = "Delete from usuarios where usuario='" + usuario + "';";

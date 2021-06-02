@@ -30,6 +30,9 @@ namespace ManaCar
             }else if (tbDNIR.Text.Length == 0)
             {
                 MessageBox.Show("El DNI es un campo obligatorio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }else if (con.ComprobarDni(tbDNIR.Text) == true)
+            {
+                MessageBox.Show("Un cliente ya tiene el DNI que acabas de introducir", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

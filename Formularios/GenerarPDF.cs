@@ -26,6 +26,10 @@ namespace ManaCar.Formularios
             {
                 MessageBox.Show("Fecha de salida no puede ser igual o anterior a la fecha de entrada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (tbPDFName.Text.Length == 0)
+            {
+                MessageBox.Show("Introduzca el nombre del fichero .pdf", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 con.generarPDF(dtpFechaEntrada.Value, dtpFechaSalida.Value, tbPDFName.Text);

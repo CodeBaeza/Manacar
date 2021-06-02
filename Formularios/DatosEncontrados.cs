@@ -50,12 +50,18 @@ namespace ManaCar.Formularios
                 dc.Matricula = tbMatriculaEncontrada.Text;
                 dc.Marca = tbMarcaEncontrada.Text;
                 dc.PlazaParking = tbPlazaParkingEncontrado.Text;
-
-                con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
-                MessageBox.Show("Datos actualizados correctamente");
-                this.Close();
+                if (dc.Dni.Length == 0)
+                {
+                    MessageBox.Show("No puedes dejar el campo DNI vacio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
+                    MessageBox.Show("Datos actualizados correctamente");
+                    this.Close();
+                }
+            
             }
-           
         }
 
         private void btnEliminarEncontrado_Click(object sender, EventArgs e)

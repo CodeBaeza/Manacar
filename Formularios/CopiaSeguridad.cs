@@ -36,9 +36,20 @@ namespace ManaCar
         private void btnGuardarCS_Click(object sender, EventArgs e)
         {
             string nombreDocumento = tbNombreCS.Text;
-            string ruta = tbPathCS.Text;    
-            con.BackUpDataBase(nombreDocumento,ruta);
-            MessageBox.Show("Copia de seguridad guardada correctamente", "Copia de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string ruta = tbPathCS.Text;
+            if (tbNombreCS.Text.Length == 0)
+            {
+                MessageBox.Show("Introduzca el nombre del fichero .sql", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else if (ruta.Length == 0)
+            {
+                MessageBox.Show("Introduzca una ruta valida para guardar el fichero .sql", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                con.BackUpDataBase(nombreDocumento, ruta);
+                MessageBox.Show("Copia de seguridad guardada correctamente", "Copia de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }
