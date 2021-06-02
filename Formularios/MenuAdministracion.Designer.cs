@@ -185,9 +185,10 @@ namespace ManaCar
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::ManaCar.Properties.Resources.manacar1;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 103);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 103);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 184);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 175);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
@@ -196,7 +197,7 @@ namespace ManaCar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(314, 338);
+            this.ClientSize = new System.Drawing.Size(314, 301);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBuscarA);
             this.Controls.Add(this.btnRegistroA);

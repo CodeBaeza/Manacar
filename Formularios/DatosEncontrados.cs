@@ -36,18 +36,26 @@ namespace ManaCar.Formularios
         private void btnGuardarEncontrado_Click(object sender, EventArgs e)
         {
             DatosClientes dc = new DatosClientes();
-            dc.Nombre = tbNombreEncontrado.Text;
-            dc.Apellidos = tbApellidosEncontados.Text;
-            dc.Dni = tbDNIEncontrado.Text;
-            dc.FechaEntrada = dtpFechaEntrada.Value;
-            dc.FechaSalida = dtpFechaSalida.Value;
-            dc.Matricula = tbMatriculaEncontrada.Text;
-            dc.Marca = tbMarcaEncontrada.Text;
-            dc.PlazaParking = tbPlazaParkingEncontrado.Text;
+            if (dtpFechaEntrada.Value >= dtpFechaSalida.Value)
+            {
+                MessageBox.Show("Fecha de salida no puede ser igual o anterior a la fecha de entrada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                dc.Nombre = tbNombreEncontrado.Text;
+                dc.Apellidos = tbApellidosEncontados.Text;
+                dc.Dni = tbDNIEncontrado.Text;
+                dc.FechaEntrada = dtpFechaEntrada.Value;
+                dc.FechaSalida = dtpFechaSalida.Value;
+                dc.Matricula = tbMatriculaEncontrada.Text;
+                dc.Marca = tbMarcaEncontrada.Text;
+                dc.PlazaParking = tbPlazaParkingEncontrado.Text;
 
-            con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
-            MessageBox.Show("Datos actualizados correctamente");
-            this.Close();
+                con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
+                MessageBox.Show("Datos actualizados correctamente");
+                this.Close();
+            }
+           
         }
 
         private void btnEliminarEncontrado_Click(object sender, EventArgs e)

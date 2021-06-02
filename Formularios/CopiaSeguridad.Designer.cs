@@ -37,15 +37,7 @@ namespace ManaCar
             this.label3 = new System.Windows.Forms.Label();
             this.btnPathCopia = new System.Windows.Forms.Button();
             this.btnGuardarCS = new System.Windows.Forms.Button();
-            this.lvHistorialCopiaCS = new System.Windows.Forms.ListView();
-            this.columnaNombreCS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columaPathCS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnaFechaCS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnBuscarCS = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbPathCS = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,63 +104,6 @@ namespace ManaCar
             this.btnGuardarCS.UseVisualStyleBackColor = false;
             this.btnGuardarCS.Click += new System.EventHandler(this.btnGuardarCS_Click);
             // 
-            // lvHistorialCopiaCS
-            // 
-            this.lvHistorialCopiaCS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnaNombreCS,
-            this.columaPathCS,
-            this.columnaFechaCS});
-            this.lvHistorialCopiaCS.HideSelection = false;
-            this.lvHistorialCopiaCS.Location = new System.Drawing.Point(12, 177);
-            this.lvHistorialCopiaCS.Name = "lvHistorialCopiaCS";
-            this.lvHistorialCopiaCS.Size = new System.Drawing.Size(592, 97);
-            this.lvHistorialCopiaCS.TabIndex = 8;
-            this.lvHistorialCopiaCS.UseCompatibleStateImageBehavior = false;
-            this.lvHistorialCopiaCS.View = System.Windows.Forms.View.Details;
-            // 
-            // columnaNombreCS
-            // 
-            this.columnaNombreCS.Text = "Nombre";
-            this.columnaNombreCS.Width = 84;
-            // 
-            // columaPathCS
-            // 
-            this.columaPathCS.Text = "Ruta";
-            this.columaPathCS.Width = 279;
-            // 
-            // columnaFechaCS
-            // 
-            this.columnaFechaCS.Text = "Fecha de creación";
-            this.columnaFechaCS.Width = 225;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Historial de copias de seguridad";
-            // 
-            // btnBuscarCS
-            // 
-            this.btnBuscarCS.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnBuscarCS.Location = new System.Drawing.Point(12, 280);
-            this.btnBuscarCS.Name = "btnBuscarCS";
-            this.btnBuscarCS.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarCS.TabIndex = 6;
-            this.btnBuscarCS.Text = "Listar";
-            this.btnBuscarCS.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ManaCar.Properties.Resources.manacar1;
-            this.pictureBox1.Location = new System.Drawing.Point(401, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 138);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // tbPathCS
             // 
             this.tbPathCS.Location = new System.Drawing.Point(12, 84);
@@ -181,11 +116,7 @@ namespace ManaCar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(617, 324);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnBuscarCS);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lvHistorialCopiaCS);
+            this.ClientSize = new System.Drawing.Size(353, 154);
             this.Controls.Add(this.btnGuardarCS);
             this.Controls.Add(this.btnPathCopia);
             this.Controls.Add(this.tbPathCS);
@@ -201,7 +132,6 @@ namespace ManaCar
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Copia de seguridad";
             this.Load += new System.EventHandler(this.CopiaSeguridad_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,13 +146,6 @@ namespace ManaCar
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPathCopia;
         private System.Windows.Forms.Button btnGuardarCS;
-        private System.Windows.Forms.ListView lvHistorialCopiaCS;
-        private System.Windows.Forms.ColumnHeader columnaNombreCS;
-        private System.Windows.Forms.ColumnHeader columaPathCS;
-        private System.Windows.Forms.ColumnHeader columnaFechaCS;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnBuscarCS;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tbPathCS;
     }
 }

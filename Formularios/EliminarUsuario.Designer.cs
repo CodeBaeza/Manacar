@@ -35,15 +35,13 @@ namespace ManaCar
             this.label2 = new System.Windows.Forms.Label();
             this.btnMostrarUsuarios = new System.Windows.Forms.Button();
             this.btnEliminarE = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUsuarios = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +50,7 @@ namespace ManaCar
             // tbEliminarUsuarioE
             // 
             this.tbEliminarUsuarioE.BackColor = System.Drawing.SystemColors.Window;
-            this.tbEliminarUsuarioE.Location = new System.Drawing.Point(162, 25);
+            this.tbEliminarUsuarioE.Location = new System.Drawing.Point(12, 25);
             this.tbEliminarUsuarioE.Name = "tbEliminarUsuarioE";
             this.tbEliminarUsuarioE.Size = new System.Drawing.Size(228, 20);
             this.tbEliminarUsuarioE.TabIndex = 1;
@@ -60,7 +58,7 @@ namespace ManaCar
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(9, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 3;
@@ -69,7 +67,7 @@ namespace ManaCar
             // btnMostrarUsuarios
             // 
             this.btnMostrarUsuarios.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnMostrarUsuarios.Location = new System.Drawing.Point(12, 243);
+            this.btnMostrarUsuarios.Location = new System.Drawing.Point(12, 181);
             this.btnMostrarUsuarios.Name = "btnMostrarUsuarios";
             this.btnMostrarUsuarios.Size = new System.Drawing.Size(75, 23);
             this.btnMostrarUsuarios.TabIndex = 3;
@@ -80,7 +78,7 @@ namespace ManaCar
             // btnEliminarE
             // 
             this.btnEliminarE.BackColor = System.Drawing.Color.LightCoral;
-            this.btnEliminarE.Location = new System.Drawing.Point(162, 51);
+            this.btnEliminarE.Location = new System.Drawing.Point(12, 51);
             this.btnEliminarE.Name = "btnEliminarE";
             this.btnEliminarE.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarE.TabIndex = 2;
@@ -88,21 +86,12 @@ namespace ManaCar
             this.btnEliminarE.UseVisualStyleBackColor = false;
             this.btnEliminarE.Click += new System.EventHandler(this.btnEliminarE_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ManaCar.Properties.Resources.manacar1;
-            this.pictureBox1.Location = new System.Drawing.Point(162, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 193);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // lbUsuarios
             // 
             this.lbUsuarios.FormattingEnabled = true;
-            this.lbUsuarios.Location = new System.Drawing.Point(12, 25);
+            this.lbUsuarios.Location = new System.Drawing.Point(12, 93);
             this.lbUsuarios.Name = "lbUsuarios";
-            this.lbUsuarios.Size = new System.Drawing.Size(144, 212);
+            this.lbUsuarios.Size = new System.Drawing.Size(228, 82);
             this.lbUsuarios.TabIndex = 8;
             // 
             // EliminarUsuario
@@ -110,9 +99,8 @@ namespace ManaCar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1106, 426);
+            this.ClientSize = new System.Drawing.Size(253, 218);
             this.Controls.Add(this.lbUsuarios);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEliminarE);
             this.Controls.Add(this.btnMostrarUsuarios);
             this.Controls.Add(this.label2);
@@ -124,7 +112,6 @@ namespace ManaCar
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar usuario";
             this.Load += new System.EventHandler(this.EliminarUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,7 +124,6 @@ namespace ManaCar
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnMostrarUsuarios;
         private System.Windows.Forms.Button btnEliminarE;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox lbUsuarios;
     }
 }

@@ -173,8 +173,8 @@ namespace ManaCar.Clases
             try
             {
                 databaseConnection.Open();
-                MySqlCommand comandDatabase = new MySqlCommand(queryInsert, databaseConnection);
-                comando = comandDatabase.ExecuteReader();
+                MySqlCommand comandDatabase = new MySqlCommand(queryInsert, databaseConnection);                            
+                comando = comandDatabase.ExecuteReader(); 
             }
             catch (Exception e)
             {

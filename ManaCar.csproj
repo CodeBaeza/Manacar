@@ -101,7 +101,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Backup.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\UsuarioActivo.cs" />
     <Compile Include="Clases\UsuariosSistema.cs" />

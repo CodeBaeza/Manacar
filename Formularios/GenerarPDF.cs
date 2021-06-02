@@ -22,11 +22,17 @@ namespace ManaCar.Formularios
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            con.generarPDF(dtpFechaEntrada.Value, dtpFechaSalida.Value,tbPDFName.Text);
-            DocumentoPDF generarPdf =  new DocumentoPDF();
-            generarPdf.Show();
+            if (dtpFechaEntrada.Value >= dtpFechaSalida.Value)
+            {
+                MessageBox.Show("Fecha de salida no puede ser igual o anterior a la fecha de entrada", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                con.generarPDF(dtpFechaEntrada.Value, dtpFechaSalida.Value, tbPDFName.Text);
+                DocumentoPDF generarPdf = new DocumentoPDF();
+                generarPdf.Show();
+            }           
         }
-
         private void Generar_PDF_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();

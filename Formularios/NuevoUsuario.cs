@@ -23,22 +23,22 @@ namespace ManaCar
         {           
             if (tbUsuarioN.Text.Length == 0)
             {           
-            MessageBox.Show("Introduce el usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                                 
+            MessageBox.Show("Introduce el usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                                 
             }
             else if (tbContraseñaN.Text.Length == 0)
             {
-                MessageBox.Show("Selecciona el privilegio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Introduzca una contraseña.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 if (con.comprobarUsuario(tbUsuarioN.Text) == true)
                 {
-                    MessageBox.Show("El nombre de usuario ya esta en uso");
+                    MessageBox.Show("El nombre de usuario ya esta en uso.","Atención",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
                 else 
                 {
                     con.nuevoUsuario(tbUsuarioN.Text, tbContraseñaN.Text);
-                    MessageBox.Show("Usuario creado satisfactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario creado satisfactoriamente.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tbUsuarioN.Text = "";
                     tbContraseñaN.Text = "";
                 }

@@ -38,8 +38,6 @@ namespace ManaCar
             this.lbUsuarios = new System.Windows.Forms.ListBox();
             this.tbBuscarDNI = new System.Windows.Forms.TextBox();
             this.btnAbrir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -93,22 +91,12 @@ namespace ManaCar
             this.btnAbrir.UseVisualStyleBackColor = false;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ManaCar.Properties.Resources.manacar1;
-            this.pictureBox1.Location = new System.Drawing.Point(93, 142);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 139);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // Buscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(390, 304);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(387, 152);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.tbBuscarDNI);
             this.Controls.Add(this.lbUsuarios);
@@ -121,7 +109,6 @@ namespace ManaCar
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar";
             this.Load += new System.EventHandler(this.Buscar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +122,5 @@ namespace ManaCar
         private System.Windows.Forms.ListBox lbUsuarios;
         private System.Windows.Forms.TextBox tbBuscarDNI;
         private System.Windows.Forms.Button btnAbrir;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

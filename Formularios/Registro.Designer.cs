@@ -44,7 +44,7 @@ namespace ManaCar
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbPlazaParking = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardarRegistro = new System.Windows.Forms.Button();
             this.tbModeloR = new System.Windows.Forms.TextBox();
             this.tbMarcaR = new System.Windows.Forms.TextBox();
@@ -153,7 +153,7 @@ namespace ManaCar
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.tbPlazaParking);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.btnGuardarRegistro);
             this.groupBox1.Controls.Add(this.tbModeloR);
             this.groupBox1.Controls.Add(this.tbMarcaR);
@@ -203,15 +203,16 @@ namespace ManaCar
             this.label12.TabIndex = 23;
             this.label12.Text = "Plaza de parking";
             // 
-            // button2
+            // btnLimpiar
             // 
-            this.button2.BackColor = System.Drawing.Color.Khaki;
-            this.button2.Location = new System.Drawing.Point(378, 199);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLimpiar.BackColor = System.Drawing.Color.Khaki;
+            this.btnLimpiar.Location = new System.Drawing.Point(378, 199);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 11;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardarRegistro
             // 
@@ -384,7 +385,7 @@ namespace ManaCar
         private System.Windows.Forms.DateTimePicker dtpFechaEntrada;
         private System.Windows.Forms.DateTimePicker dtpFechaSalida;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardarRegistro;
         private System.Windows.Forms.TextBox tbModeloR;
         private System.Windows.Forms.TextBox tbMarcaR;

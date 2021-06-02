@@ -52,7 +52,7 @@ namespace ManaCar
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(345, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(331, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@ namespace ManaCar
             // btnEntrar
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnEntrar.Location = new System.Drawing.Point(62, 270);
+            this.btnEntrar.Location = new System.Drawing.Point(62, 209);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(90, 23);
             this.btnEntrar.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace ManaCar
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Khaki;
-            this.btnLimpiar.Location = new System.Drawing.Point(183, 270);
+            this.btnLimpiar.Location = new System.Drawing.Point(183, 209);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(92, 23);
             this.btnLimpiar.TabIndex = 4;
@@ -87,14 +87,14 @@ namespace ManaCar
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(62, 205);
+            this.tbUsuario.Location = new System.Drawing.Point(62, 144);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(213, 20);
             this.tbUsuario.TabIndex = 1;
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(62, 244);
+            this.tbPass.Location = new System.Drawing.Point(62, 183);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(213, 20);
@@ -103,7 +103,7 @@ namespace ManaCar
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 189);
+            this.label1.Location = new System.Drawing.Point(59, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 5;
@@ -112,7 +112,7 @@ namespace ManaCar
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 228);
+            this.label2.Location = new System.Drawing.Point(59, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 6;
@@ -123,14 +123,15 @@ namespace ManaCar
             this.pictureBox1.Image = global::ManaCar.Properties.Resources.manacar1;
             this.pictureBox1.Location = new System.Drawing.Point(62, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 159);
+            this.pictureBox1.Size = new System.Drawing.Size(213, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(209, 319);
+            this.label3.Location = new System.Drawing.Point(12, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 13);
             this.label3.TabIndex = 8;
@@ -141,7 +142,7 @@ namespace ManaCar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(345, 341);
+            this.ClientSize = new System.Drawing.Size(331, 273);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
