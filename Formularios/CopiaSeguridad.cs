@@ -29,8 +29,10 @@ namespace ManaCar
         private void btnPathCopia_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog copiaDestino = new FolderBrowserDialog();
-            if (copiaDestino.ShowDialog() == DialogResult.OK) ;
-            tbPathCS.Text = copiaDestino.SelectedPath;
+            if (copiaDestino.ShowDialog() == DialogResult.OK)
+            {
+                tbPathCS.Text = copiaDestino.SelectedPath;
+            }
         }
 
         private void btnGuardarCS_Click(object sender, EventArgs e)
