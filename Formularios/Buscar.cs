@@ -35,8 +35,7 @@ namespace ManaCar
                 else
                 { 
                     lbUsuarios.Items.AddRange(auxiliar.ToArray());
-                }
-               
+                }              
             }
             else
             {
