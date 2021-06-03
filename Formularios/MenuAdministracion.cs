@@ -66,7 +66,7 @@ namespace ManaCar
         private void MenuAdministracion_Load(object sender, EventArgs e)
         {
             UsuarioActivo us = new UsuarioActivo();           
-            this.Text = "Administracion - "+us.Activo;
+            this.Text = "Administración - "+us.Activo;
         }
     }
 }

@@ -9,7 +9,6 @@ namespace ManaCar.Clases
     public class UsuarioActivo
     {
         static string activo;
-
         public string Activo { get => activo; set => activo = value; }
     }
 }

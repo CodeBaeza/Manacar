@@ -29,6 +29,7 @@ namespace ManaCar.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Generar_PDF));
             this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaSalida = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -109,6 +110,7 @@ namespace ManaCar.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpFechaSalida);
             this.Controls.Add(this.dtpFechaEntrada);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Generar_PDF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,14 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
-using System.Diagnostics;
+
 
 namespace ManaCar.Clases
 {
@@ -50,7 +47,7 @@ namespace ManaCar.Clases
                     }
                     else
                     {
-                        MessageBox.Show("Usuario no encontrado, comprueba si tus credenciales estan bien escritas,","Atención",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Usuario no encontrado, comprueba si tus credenciales estan bien escritas","Atención",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                 }
             }
@@ -385,19 +382,25 @@ namespace ManaCar.Clases
             doc.Open();
             Paragraph title = new Paragraph();
             title.Font = FontFactory.GetFont(FontFactory.TIMES, 28f, BaseColor.BLUE);
-            title.Add("LISTADO PDF");
+            title.Alignment = Element.ALIGN_CENTER;
+            title.Add(fecha_entrada.ToString("dd/MM/yyyy") + " Hasta " + fecha_salida.ToString("dd/MM/yyyy"));
+
             doc.Add(title);
             doc.Add(new Paragraph(" "));
 
+
             PdfPTable table = new PdfPTable(7);
-                table.AddCell("nombre");
-                table.AddCell("apellidos");
-                table.AddCell("dni");
-                
-                table.AddCell("matricula");
-                table.AddCell("marca");
+            
+              
+            table.HorizontalAlignment = Element.ALIGN_CENTER;
+                table.AddCell("Nombre");
+                table.AddCell("Apellidos");
+                table.AddCell("DNI");
+                table.AddCell("Matrícula");
+                table.AddCell("Marca");
                 table.AddCell("modelo");
-                table.AddCell("parking");
+                table.AddCell("Parking");
+                
             try
             {
                 databaseConnection.Open();
@@ -409,7 +412,7 @@ namespace ManaCar.Clases
                     {
                         table.AddCell(comando.GetString("nombre"));
                         table.AddCell(comando.GetString("apellidos"));
-                        table.AddCell(comando.GetString("dni"));                                               
+                        table.AddCell(comando.GetString("dni"));                                        
                         table.AddCell(comando.GetString("matricula"));
                         table.AddCell(comando.GetString("marca"));
                         table.AddCell(comando.GetString("modelo"));
