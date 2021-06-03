@@ -15,8 +15,7 @@ namespace ManaCar
     public partial class EliminarUsuario : Form
     {
         Conexion con = new Conexion();
-       
-       
+      
         public EliminarUsuario()
         {
             InitializeComponent();
@@ -47,7 +46,6 @@ namespace ManaCar
                         lbUsuarios.Items.Clear();
                         auxiliar = con.mostrarLista();
                         lbUsuarios.Items.AddRange(auxiliar.ToArray());
-                        
 
                     }                  
                 }
