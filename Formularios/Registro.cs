@@ -16,14 +16,12 @@ namespace ManaCar
         Conexion con = new Conexion();
         public Registro()
         {
-
             InitializeComponent();
         }
 
         private void btnGuardarRegistro_Click(object sender, EventArgs e)
         {
-            DatosClientes dc = new DatosClientes(tbNombreR.Text, tbApellidosR.Text, tbDNIR.Text, tbMatriculaR.Text, tbMarcaR.Text, tbModeloR.Text, tbPlazaParking.Text, dtpFechaEntrada.Value, dtpFechaSalida.Value);
-           
+            DatosClientes dc = new DatosClientes(tbNombreR.Text, tbApellidosR.Text, tbDNIR.Text, tbMatriculaR.Text, tbMarcaR.Text, tbModeloR.Text, tbPlazaParking.Text, dtpFechaEntrada.Value, dtpFechaSalida.Value);         
             if (dtpFechaEntrada.Value >= dtpFechaSalida.Value)
             {
                 MessageBox.Show("Fecha de salida no puede ser igual o anterior a la fecha de entrada","Atención",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -57,8 +55,7 @@ namespace ManaCar
                 tbMarcaR.Text = "";
                 tbPlazaParking.Text = "";
                 MessageBox.Show("Cliente registrado satisfactoriamente en el sistema", "Registro", MessageBoxButtons.OK);
-            }
-            
+            }          
         }
 
         private void Registro_Load(object sender, EventArgs e)
@@ -75,8 +72,7 @@ namespace ManaCar
             tbMatriculaR.Text = "";
             tbModeloR.Text = "";
             tbMarcaR.Text = "";
-            tbPlazaParking.Text = "";
-            
+            tbPlazaParking.Text = "";   
         }
     }
 }
