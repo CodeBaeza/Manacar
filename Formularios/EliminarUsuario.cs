@@ -46,7 +46,6 @@ namespace ManaCar
                         lbUsuarios.Items.Clear();
                         auxiliar = con.mostrarLista();
                         lbUsuarios.Items.AddRange(auxiliar.ToArray());
-
                     }                  
                 }
                 else
