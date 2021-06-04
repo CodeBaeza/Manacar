@@ -54,15 +54,15 @@ namespace ManaCar
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lvRegistroR = new System.Windows.Forms.ListView();
-            this.columnaParking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaApellidos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaDNI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnaMatricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnaMarca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnaModelo1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaFEntrada = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnaFsalida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaMarca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaMatricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaModelo1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnaParking = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -285,73 +285,67 @@ namespace ManaCar
             // lvRegistroR
             // 
             this.lvRegistroR.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnaParking,
             this.columnaNombre,
             this.columnaApellidos,
             this.columnaDNI,
-            this.columnaFEntrada,
-            this.columnaFsalida,
             this.columnaMarca,
             this.columnaMatricula,
-            this.columnaModelo1,
-            this.columnaParking});
+            this.columnaFEntrada,
+            this.columnaFsalida,
+            this.columnaModelo1});
             this.lvRegistroR.HideSelection = false;
-            this.lvRegistroR.Location = new System.Drawing.Point(12, 322);
+            this.lvRegistroR.Location = new System.Drawing.Point(12, 313);
             this.lvRegistroR.Name = "lvRegistroR";
             this.lvRegistroR.Size = new System.Drawing.Size(776, 97);
             this.lvRegistroR.TabIndex = 14;
             this.lvRegistroR.UseCompatibleStateImageBehavior = false;
             this.lvRegistroR.View = System.Windows.Forms.View.Details;
             // 
-            // columnaParking
-            // 
-            this.columnaParking.DisplayIndex = 0;
-            this.columnaParking.Text = "Parking";
-            this.columnaParking.Width = 51;
-            // 
             // columnaNombre
             // 
-            this.columnaNombre.DisplayIndex = 1;
             this.columnaNombre.Text = "Nombre";
             this.columnaNombre.Width = 68;
             // 
             // columnaApellidos
             // 
-            this.columnaApellidos.DisplayIndex = 2;
             this.columnaApellidos.Text = "Apellidos";
             this.columnaApellidos.Width = 81;
             // 
             // columnaDNI
             // 
-            this.columnaDNI.DisplayIndex = 3;
             this.columnaDNI.Text = "DNI";
             this.columnaDNI.Width = 80;
+            // 
+            // columnaFEntrada
+            // 
+            this.columnaFEntrada.Text = "Entrada";
+            this.columnaFEntrada.Width = 112;
+            // 
+            // columnaFsalida
+            // 
+            this.columnaFsalida.Text = "Salida";
+            this.columnaFsalida.Width = 70;
+            // 
+            // columnaMarca
+            // 
+            this.columnaMarca.DisplayIndex = 5;
+            this.columnaMarca.Text = "Marca";
+            this.columnaMarca.Width = 84;
             // 
             // columnaMatricula
             // 
             this.columnaMatricula.DisplayIndex = 4;
             this.columnaMatricula.Text = "Matricula";
             // 
-            // columnaMarca
-            // 
-            this.columnaMarca.Text = "Marca";
-            this.columnaMarca.Width = 84;
-            // 
             // columnaModelo1
             // 
-            this.columnaModelo1.DisplayIndex = 8;
             this.columnaModelo1.Text = "Modelo";
             // 
-            // columnaFEntrada
+            // columnaParking
             // 
-            this.columnaFEntrada.DisplayIndex = 6;
-            this.columnaFEntrada.Text = "Entrada";
-            this.columnaFEntrada.Width = 112;
-            // 
-            // columnaFsalida
-            // 
-            this.columnaFsalida.DisplayIndex = 7;
-            this.columnaFsalida.Text = "Salida";
-            this.columnaFsalida.Width = 70;
+            this.columnaParking.Text = "Parking";
+            this.columnaParking.Width = 51;
             // 
             // Registro
             // 

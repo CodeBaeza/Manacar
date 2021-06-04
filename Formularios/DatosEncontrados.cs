@@ -57,7 +57,7 @@ namespace ManaCar.Formularios
                 else
                 {
                     con.actualizarDatosClientes(dc.Nombre, dc.Apellidos, dc.Dni, dc.FechaEntrada, dc.FechaSalida, dc.Matricula, dc.Marca, dc.Modelo, dc.PlazaParking);
-                    MessageBox.Show("Datos actualizados correctamente");
+                    MessageBox.Show("Datos actualizados correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             
@@ -67,10 +67,8 @@ namespace ManaCar.Formularios
         private void btnEliminarEncontrado_Click(object sender, EventArgs e)
         {          
             con.eliminarDatosClientes(tbDNIEncontrado.Text);
-            MessageBox.Show("Datos eliminados correctamente");
+            MessageBox.Show("Datos eliminados correctamente","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
             this.Close();
-            Buscar bc = new Buscar();
-            bc.Show();
         }
 
         private void DatosEncontrados_Load(object sender, EventArgs e)
