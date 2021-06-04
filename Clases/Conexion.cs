@@ -262,7 +262,7 @@ namespace ManaCar.Clases
         public List<DatosClientes> MostrarTodosLosClientes()
         {
             List<DatosClientes> listaAux = new List<DatosClientes>();
-            string querySearch = "Select * from clientes";         
+            string querySearch = "Select * from clientes Order By nombre";         
             try
             {
                 databaseConnection.Open();
